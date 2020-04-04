@@ -3,8 +3,8 @@ title: method overriding
 date: "2020-03-18"
 template: "post"
 draft: false
-slug: “python-method-overriding”
-category: “python”
+slug: "python-method-overriding"
+category: "python"
 tags:
   - "python"
   - "method overriding"

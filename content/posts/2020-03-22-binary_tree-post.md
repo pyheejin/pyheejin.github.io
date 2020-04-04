@@ -3,8 +3,8 @@ title: binary tree
 date: "2020-03-22"
 template: "post"
 draft: false
-slug: “python-binary-tree”
-category: “python”
+slug: "python-binary-tree"
+category: "python"
 tags:
   - "python"
   - "binary tree"

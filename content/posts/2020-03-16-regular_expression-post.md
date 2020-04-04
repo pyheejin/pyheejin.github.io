@@ -3,8 +3,8 @@ title: regular expression
 date: "2020-03-16"
 template: "post"
 draft: false
-slug: “python-regular-expression”
-category: “python”
+slug: "python-regular-expression"
+category: "python"
 tags:
   - "python"
   - "decorator"

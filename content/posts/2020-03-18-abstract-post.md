@@ -3,8 +3,8 @@ title: 추상 클래스(abstract class)
 date: "2020-03-18"
 template: "post"
 draft: false
-slug: “python-abstract-class”
-category: “python”
+slug: "python-abstract-class"
+category: "python"
 tags:
   - "python"
   - "abstract class"

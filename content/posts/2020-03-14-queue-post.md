@@ -3,11 +3,11 @@ title: 큐(queue)
 date: "2020-03-14"
 template: "post"
 draft: false
-slug: “python-queue”
-category: “python”
+slug: "python-queue"
+category: "python"
 tags:
   - "python"
-  - queue
+  - "queue"
 description: "python-queue"
 socialImage: ""
 ---

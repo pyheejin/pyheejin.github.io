@@ -3,8 +3,8 @@ title: 파이썬으로 로또 추첨 프로그램 만들기
 date: "2020-03-13"
 template: "post"
 draft: false
-slug: “python-lotto”
-category: “python”
+slug: "python-lotto"
+category: "python"
 tags:
   - "python"
   - "lotto"

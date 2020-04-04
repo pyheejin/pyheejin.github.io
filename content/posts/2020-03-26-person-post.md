@@ -3,8 +3,8 @@ title: OOP
 date: "2020-03-26"
 template: "post"
 draft: false
-slug: “python-OOP”
-category: “python”
+slug: "python-OOP"
+category: "python"
 tags:
   - "python"
   - "OOP"

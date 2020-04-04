@@ -3,11 +3,11 @@ title: Modules & Packages
 date: "2020-03-30"
 template: "post"
 draft: false
-slug: “python-Modules-Packages”
-category: “python”
+slug: "python-Modules-Packages"
+category: "python"
 tags:
   - "python"
-  - “Modules & Packages”
+  - "Modules & Packages"
 description: "python Modules & Packages"
 socialImage: ""
 ---

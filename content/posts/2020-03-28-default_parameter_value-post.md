@@ -3,8 +3,8 @@ title: Function Parameters
 date: "2020-03-28"
 template: "post"
 draft: false
-slug: “python-Function-Parameters”
-category: “python”
+slug: "python-Function-Parameters"
+category: "python"
 tags:
   - "python"
   - "Function Parameters"

@@ -3,8 +3,8 @@ title: reduce
 date: "2020-03-17"
 template: "post"
 draft: false
-slug: “python-reduce”
-category: “python”
+slug: "python-reduce"
+category: "python"
 tags:
   - "python"
   - "reduce"

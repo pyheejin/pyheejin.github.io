@@ -3,8 +3,8 @@ title: filter
 date: "2020-03-17"
 template: "post"
 draft: false
-slug: “python-filter”
-category: “python”
+slug: "python-filter"
+category: "python"
 tags:
   - "python"
   - "filter"

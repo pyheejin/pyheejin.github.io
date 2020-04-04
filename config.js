@@ -33,7 +33,7 @@ module.exports = {
       facebook: '',
       telegram: '',
       twitter: '',
-      github: 'https://github.com/pyheejin',
+      github: 'pyheejin',
       rss: '',
       vkontakte: '',
       linkedin: '',

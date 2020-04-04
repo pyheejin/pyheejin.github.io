@@ -3,8 +3,8 @@ title: single Linked List
 date: "2020-03-20"
 template: "post"
 draft: false
-slug: “python-single-Linked-List”
-category: “python”
+slug: "python-single-Linked-List"
+category: "python"
 tags:
   - "python"
   - "double single List"

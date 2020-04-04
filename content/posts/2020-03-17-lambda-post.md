@@ -3,8 +3,8 @@ title: lambda
 date: "2020-03-17"
 template: "post"
 draft: false
-slug: “python-lambda”
-category: “python”
+slug: "python-lambda"
+category: "python"
 tags:
   - "python"
   - "lambda"

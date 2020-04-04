@@ -3,11 +3,11 @@ title: 스택(stack)
 date: "2020-03-14"
 template: "post"
 draft: false
-slug: “python-stack"
-category: “python”
+slug: "python-stack"
+category: "python"
 tags:
   - "python"
-  - “stack”
+  - "stack"
 description: "python-stack"
 socialImage: ""
 ---

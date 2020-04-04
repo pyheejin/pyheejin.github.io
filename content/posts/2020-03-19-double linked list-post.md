@@ -3,8 +3,8 @@ title: double Linked List
 date: "2020-03-19"
 template: "post"
 draft: false
-slug: “python-double-Linked-List”
-category: “python”
+slug: "python-double-Linked-List"
+category: "python"
 tags:
   - "python"
   - "double Linked List"

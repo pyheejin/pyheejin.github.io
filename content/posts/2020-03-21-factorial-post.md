@@ -3,8 +3,8 @@ title: factorial
 date: "2020-03-21"
 template: "post"
 draft: false
-slug: “python-factorial”
-category: “python”
+slug: "python-factorial"
+category: "python"
 tags:
   - "python"
   - "factorial"

@@ -3,8 +3,8 @@ title: 상속(polymorphism)
 date: "2020-03-18"
 template: "post"
 draft: false
-slug: “python-polymorphism”
-category: “python”
+slug: "python-polymorphism"
+category: "python"
 tags:
   - "python"
   - "polymorphism"

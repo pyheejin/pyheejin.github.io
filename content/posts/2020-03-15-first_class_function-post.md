@@ -3,11 +3,11 @@ title: first class function
 date: "2020-03-15"
 template: "post"
 draft: false
-slug: “first-class-function”
-category: “python”
+slug: "first-class-function"
+category: "python"
 tags:
   - "python"
-  - “first class function”
+  - "first class function"
 description: "first class function"
 socialImage: ""
 ---

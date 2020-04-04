@@ -3,8 +3,8 @@ title: fibonacci
 date: "2020-03-21"
 template: "post"
 draft: false
-slug: “python-fibonacci”
-category: “python”
+slug: "python-fibonacci"
+category: "python"
 tags:
   - "python"
   - "fibonacci"

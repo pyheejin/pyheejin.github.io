@@ -3,8 +3,8 @@ title: decorator
 date: "2020-03-16"
 template: "post"
 draft: false
-slug: “python-decorator”
-category: “python”
+slug: "python-decorator"
+category: "python"
 tags:
   - "python"
   - "decorator"

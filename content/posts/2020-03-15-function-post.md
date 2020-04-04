@@ -3,8 +3,8 @@ title: function
 date: "2020-03-15"
 template: "post"
 draft: false
-slug: “python-function”
-category: “python”
+slug: "python-function"
+category: "python"
 tags:
   - "python"
   - "function"

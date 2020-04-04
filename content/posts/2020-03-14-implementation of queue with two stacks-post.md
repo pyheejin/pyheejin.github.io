@@ -3,8 +3,8 @@ title: 스택 2개로 큐 구현하기
 date: "2020-03-14"
 template: "post"
 draft: false
-slug: “implementation-of-queue-with-two-stacks”
-category: “python”
+slug: "implementation-of-queue-with-two-stacks"
+category: "python"
 tags:
   - "python"
   - "queue"
