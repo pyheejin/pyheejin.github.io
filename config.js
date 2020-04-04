@@ -16,6 +16,30 @@ module.exports = {
       path: '/'
     },
     {
+      label: 'Python',
+      path: '/category/python'
+    },
+    {
+      label: 'JavaScript',
+      path: '/category/javascript'
+    },
+    {
+      label: 'HTML/CSS',
+      path: '/category/htmlcss'
+    },
+    {
+      label: 'WEB',
+      path: '/category/web'
+    },
+    {
+      label: 'Git',
+      path: '/category/git'
+    },
+    {
+      label: 'Algorithm',
+      path: '/category/algorithm'
+    },
+    {
       label: 'About me',
       path: '/pages/about'
     },

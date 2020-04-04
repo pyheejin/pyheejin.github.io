@@ -6,7 +6,7 @@ draft: false
 slug: "selection-sort"
 category: "algorithm"
 tags:
-  - "selection sort"
+  - "selection-sort"
 description: "selection sort (선택 정렬)"
 socialImage: ""
 ---

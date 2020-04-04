@@ -6,7 +6,7 @@ draft: false
 slug: "quick-sort"
 category: "algorithm"
 tags:
-  - "quick sort"
+  - "quick_sort"
 description: "quick sort (빠른 정렬)"
 socialImage: ""
 ---

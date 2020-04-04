@@ -6,7 +6,7 @@ draft: false
 slug: "bubble-sort"
 category: "algorithm"
 tags:
-  - "bubble sort"
+  - "bubble_sort"
 description: "bubble sort (거품 정렬)"
 socialImage: ""
 ---

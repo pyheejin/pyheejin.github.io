@@ -6,7 +6,7 @@ draft: false
 slug: "merge-sort"
 category: "algorithm"
 tags:
-  - "merge sort"
+  - "merge_sort"
 description: "merge sort (병합 정렬)"
 socialImage: ""
 ---
