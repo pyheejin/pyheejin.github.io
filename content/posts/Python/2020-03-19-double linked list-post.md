@@ -7,7 +7,7 @@ slug: "python-double-Linked-List"
 category: "python"
 tags:
   - "python"
-  - "double Linked List"
+  - "double_Linked_List"
 description: "python-double-Linked-List"
 socialImage: ""
 ---

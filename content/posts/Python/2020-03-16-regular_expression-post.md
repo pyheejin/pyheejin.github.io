@@ -7,7 +7,7 @@ slug: "python-regular-expression"
 category: "python"
 tags:
   - "python"
-  - "decorator"
+  - "python_regular_expression"
 description: "python-regular-expression"
 socialImage: ""
 ---

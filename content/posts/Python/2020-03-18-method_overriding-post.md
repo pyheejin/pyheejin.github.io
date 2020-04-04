@@ -7,7 +7,7 @@ slug: "python-method-overriding"
 category: "python"
 tags:
   - "python"
-  - "method overriding"
+  - "method_overriding"
 description: "python-method-overriding"
 socialImage: ""
 ---

@@ -7,7 +7,7 @@ slug: "css-semantic-tags"
 category: "htmlcss"
 tags:
   - "css"
-  - "semantic tags"
+  - "semantic_tags"
 description: "css Semantic Tags"
 socialImage: ""
 ---

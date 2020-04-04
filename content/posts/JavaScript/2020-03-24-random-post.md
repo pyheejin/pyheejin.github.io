@@ -7,6 +7,7 @@ slug: "자바스크립트-랜덤"
 category: "javascript"
 tags:
   - "javascript"
+  - "Math.random()"
 description: "자바스크립트의 랜덤"
 socialImage: ""
 ---

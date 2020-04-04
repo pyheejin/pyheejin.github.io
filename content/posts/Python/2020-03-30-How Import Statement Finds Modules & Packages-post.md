@@ -7,7 +7,7 @@ slug: "python-Modules-Packages"
 category: "python"
 tags:
   - "python"
-  - "Modules & Packages"
+  - "Modules_Packages"
 description: "python Modules & Packages"
 socialImage: ""
 ---

@@ -7,7 +7,7 @@ slug: "python-binary-tree"
 category: "python"
 tags:
   - "python"
-  - "binary tree"
+  - "binary_tree"
 description: "python binary tree"
 socialImage: ""
 ---

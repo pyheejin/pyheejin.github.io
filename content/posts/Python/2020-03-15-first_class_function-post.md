@@ -7,7 +7,7 @@ slug: "first-class-function"
 category: "python"
 tags:
   - "python"
-  - "first class function"
+  - "first_class_function"
 description: "first class function"
 socialImage: ""
 ---

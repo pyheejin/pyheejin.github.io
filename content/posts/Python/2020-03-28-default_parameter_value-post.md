@@ -7,7 +7,7 @@ slug: "python-Function-Parameters"
 category: "python"
 tags:
   - "python"
-  - "Function Parameters"
+  - "Function_Parameters"
 description: "python Function Parameters"
 socialImage: ""
 ---

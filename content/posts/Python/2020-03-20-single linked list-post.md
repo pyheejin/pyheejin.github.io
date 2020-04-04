@@ -7,7 +7,7 @@ slug: "python-single-Linked-List"
 category: "python"
 tags:
   - "python"
-  - "double single List"
+  - "single_single_List"
 description: "python-single-Linked-List"
 socialImage: ""
 ---

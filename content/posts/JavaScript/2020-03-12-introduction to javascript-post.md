@@ -7,6 +7,7 @@ slug: "JavaScript의-정의와 -할"
 category: "javascript"
 tags:
   - "javascript"
+  - "introduction_to_javascript"
 description: "JavaScript의 정의와 역할"
 socialImage: ""
 ---

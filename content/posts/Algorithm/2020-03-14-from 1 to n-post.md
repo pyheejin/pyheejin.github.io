@@ -6,7 +6,7 @@ draft: false
 slug: "from-1-to-n"
 category: "algorithm"
 tags:
-  - "from-1-to-n"
+  - "from_1_to_n"
 description: "from 1 to n"
 socialImage: ""
 ---

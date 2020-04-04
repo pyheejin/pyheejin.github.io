@@ -9,7 +9,7 @@ tags:
   - "css"
   - "inline"
   - "block"
-  - "inline-block"
+  - "inline_block"
 description: "css inline, block, inline-block"
 socialImage: ""
 ---
