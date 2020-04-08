@@ -73,4 +73,19 @@ def func(a,b):
 
 for i in range(10):
     func(1,2)
+
+
+# ex 4, 인자를 string으로 받는 데코레이터
+def name_decorator(tag):
+    def outer_wrapper(function):
+        def innter_wrapper(*args, **kwargs):
+            return function(*args, **kwargs) + tag
+        return innter_wrapper
+    return outer_wrapper
+
+@name_decorator('정우성')
+def greeting():
+    return 'hello '
+
+print(greeting())
 ```
