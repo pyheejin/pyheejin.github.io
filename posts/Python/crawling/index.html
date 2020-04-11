@@ -64,77 +64,81 @@
 <div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">pip install BeautifulSoup4
 pip install requests</code></pre></div>
 <ol>
-<li>
-<p>엘리먼트</p>
+<li>엘리먼트</li>
+</ol>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> requests
 <span class="token keyword">import</span> csv
 <span class="token keyword">import</span> re
 <span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
-<span class="token keyword">from</span> urllib<span class="token punctuation">.</span>request <span class="token keyword">import</span> urlopen</code></pre></div>
-</li>
+<span class="token keyword">from</span> urllib<span class="token punctuation">.</span>request <span class="token keyword">import</span> urlopen
+
+
+<span class="token comment"># csv file open</span>
+csv_filename_to_write <span class="token operator">=</span> <span class="token string">'billboard_chart_100.csv'</span>
+csv_open <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>csv_filename_to_write<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+csv_writer <span class="token operator">=</span> csv<span class="token punctuation">.</span>writer<span class="token punctuation">(</span>csv_open<span class="token punctuation">)</span>
+csv_writer<span class="token punctuation">.</span>writerow<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'rank'</span><span class="token punctuation">,</span><span class="token string">'song'</span><span class="token punctuation">,</span><span class="token string">'artist'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># BeautifulSoup</span>
+url <span class="token operator">=</span> <span class="token string">'https://www.billboard.com/charts/hot-100'</span>
+req <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+html <span class="token operator">=</span> req<span class="token punctuation">.</span>text
+bs <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">'html.parser'</span><span class="token punctuation">)</span>
+
+hot_list <span class="token operator">=</span> bs<span class="token punctuation">.</span>findAll<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'class'</span><span class="token punctuation">:</span>re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">'chart-list__element'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> hot <span class="token keyword">in</span> hot_list<span class="token punctuation">:</span>
+    <span class="token comment"># rank</span>
+    rank_class <span class="token operator">=</span> hot<span class="token punctuation">.</span>findAll<span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'class'</span><span class="token punctuation">:</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">'chart-element__rank__number'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    rank <span class="token operator">=</span> rank_class<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+    rank <span class="token operator">=</span> <span class="token string">' '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>rank<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># song</span>
+    song_class <span class="token operator">=</span> hot<span class="token punctuation">.</span>findAll<span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'class'</span><span class="token punctuation">:</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">'chart-element__information__song'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    song <span class="token operator">=</span> song_class<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+    song <span class="token operator">=</span> <span class="token string">' '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>song<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># artist</span>
+    artist_class <span class="token operator">=</span> hot<span class="token punctuation">.</span>findAll<span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">'class'</span><span class="token punctuation">:</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">'chart-element__information__artist'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    artist <span class="token operator">=</span> artist_class<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+    artist <span class="token operator">=</span> <span class="token string">' '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>artist<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    csv_writer<span class="token punctuation">.</span>writerow<span class="token punctuation">(</span><span class="token punctuation">(</span>rank<span class="token punctuation">,</span> song<span class="token punctuation">,</span> artist<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+csv_open<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
+<ol start="2">
+<li>selector로 가져오기
+Copy - Copy selector</li>
 </ol>
-<h1 id="csv-file-open" style="position:relative;"><a href="#csv-file-open" aria-label="csv file open permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>csv file open</h1>
-<p>csv<em>filename</em>to<em>write = ‘billboard</em>chart<em>100.csv’
-csv</em>open = open(csv<em>filename</em>to<em>write, ‘w’, encoding=‘utf-8’)
-csv</em>writer = csv.writer(csv<em>open)
-csv</em>writer.writerow((‘rank’,‘song’,‘artist’))</p>
-<h1 id="beautifulsoup-1" style="position:relative;"><a href="#beautifulsoup-1" aria-label="beautifulsoup 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BeautifulSoup</h1>
-<p>url = ’<a href="https://www.billboard.com/charts/hot-100" target="_blank" rel="nofollow noopener noreferrer">https://www.billboard.com/charts/hot-100</a>’
-req = requests.get(url)
-html = req.text
-bs = BeautifulSoup(html, ‘html.parser’)</p>
-<p>hot<em>list = bs.findAll(‘li’, {‘class’:re.compile(‘chart-list__element’)})
-for hot in hot</em>list:
-# rank
-rank<em>class = hot.findAll(‘span’,{‘class’: re.compile(‘chart-element<strong>rank</strong>number’)})
-rank = rank</em>class[0].text
-rank = ’ ‘.join(rank.split())</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text"># song
-song_class = hot.findAll(&#39;span&#39;,{&#39;class&#39;: re.compile(&#39;chart-element__information__song&#39;)})
-song = song_class[0].text
-song = &#39; &#39;.join(song.split())
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+<span class="token keyword">from</span> urllib<span class="token punctuation">.</span>request <span class="token keyword">import</span> urlopen
+<span class="token keyword">import</span> csv
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> requests
 
-# artist
-artist_class = hot.findAll(&#39;span&#39;,{&#39;class&#39;: re.compile(&#39;chart-element__information__artist&#39;)})
-artist = artist_class[0].text
-artist = &#39; &#39;.join(artist.split())
+<span class="token comment"># csv file open</span>
+csv_filename_to_write <span class="token operator">=</span> <span class="token string">'billboard_chart_100_selector.csv'</span>
+csv_open <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>csv_filename_to_write<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+csv_writer <span class="token operator">=</span> csv<span class="token punctuation">.</span>writer<span class="token punctuation">(</span>csv_open<span class="token punctuation">)</span>
+csv_writer<span class="token punctuation">.</span>writerow<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'rank'</span><span class="token punctuation">,</span><span class="token string">'song'</span><span class="token punctuation">,</span><span class="token string">'artist'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-csv_writer.writerow((rank, song, artist))</code></pre></div>
-<p>csv_open.close()</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">2. selector로 가져오기
-Copy - Copy selector
+<span class="token comment"># BeautifulSoup</span>
+url <span class="token operator">=</span> <span class="token string">'https://www.billboard.com/charts/hot-100'</span>
+req <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+html <span class="token operator">=</span> req<span class="token punctuation">.</span>text
+bs <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">'html.parser'</span><span class="token punctuation">)</span>
 
-```python
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
-import csv
-import re
-import requests
+rank <span class="token operator">=</span> bs<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"#charts > div > div.chart-list.container > ol > li > button > span.chart-element__rank.flex--column.flex--xy-center.flex--no-shrink > span.chart-element__rank__number"</span><span class="token punctuation">)</span>
+song <span class="token operator">=</span> bs<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"#charts > div > div.chart-list.container > ol > li > button > span.chart-element__information > span.chart-element__information__song.text--truncate.color--primary"</span><span class="token punctuation">)</span>
+artist <span class="token operator">=</span> bs<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"#charts > div > div.chart-list.container > ol > li > button > span.chart-element__information > span.chart-element__information__artist.text--truncate.color--secondary"</span><span class="token punctuation">)</span>
 
-# csv file open
-csv_filename_to_write = &#39;billboard_chart_100_selector.csv&#39;
-csv_open = open(csv_filename_to_write, &#39;w&#39;, encoding=&#39;utf-8&#39;)
-csv_writer = csv.writer(csv_open)
-csv_writer.writerow((&#39;rank&#39;,&#39;song&#39;,&#39;artist&#39;))
+<span class="token keyword">for</span> hot <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>rank<span class="token punctuation">,</span> song<span class="token punctuation">,</span> artist<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    rank <span class="token operator">=</span> hot<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+    song <span class="token operator">=</span> hot<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
+    artist <span class="token operator">=</span> hot<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>text
 
-# BeautifulSoup
-url = &#39;https://www.billboard.com/charts/hot-100&#39;
-req = requests.get(url)
-html = req.text
-bs = BeautifulSoup(html, &#39;html.parser&#39;)
+    csv_writer<span class="token punctuation">.</span>writerow<span class="token punctuation">(</span><span class="token punctuation">(</span>rank<span class="token punctuation">,</span> song<span class="token punctuation">,</span> artist<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-rank = bs.select(&quot;#charts &gt; div &gt; div.chart-list.container &gt; ol &gt; li &gt; button &gt; span.chart-element__rank.flex--column.flex--xy-center.flex--no-shrink &gt; span.chart-element__rank__number&quot;)
-song = bs.select(&quot;#charts &gt; div &gt; div.chart-list.container &gt; ol &gt; li &gt; button &gt; span.chart-element__information &gt; span.chart-element__information__song.text--truncate.color--primary&quot;)
-artist = bs.select(&quot;#charts &gt; div &gt; div.chart-list.container &gt; ol &gt; li &gt; button &gt; span.chart-element__information &gt; span.chart-element__information__artist.text--truncate.color--secondary&quot;)
-
-for hot in zip(rank, song, artist):
-    rank = hot[0].text
-    song = hot[1].text
-    artist = hot[2].text
-
-    csv_writer.writerow((rank, song, artist))
-
-csv_open.close()</code></pre></div>
+csv_open<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div>
 <h3 id="selenium" style="position:relative;"><a href="#selenium" aria-label="selenium permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selenium</h3>
 <p>설치하기</p>
 <div class="gatsby-highlight" data-language="terminal"><pre class="language-terminal"><code class="language-terminal">pip install selenium</code></pre></div>
