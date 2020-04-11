@@ -121,7 +121,6 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 
 
-# csv file open
 csv_filename_to_write = 'billboard_chart_100_selenium.csv'
 csv_open = open(csv_filename_to_write, 'w', encoding='utf-8')
 csv_writer = csv.writer(csv_open)
