@@ -15,6 +15,8 @@ socialImage: ""
 
 ## 빌보드 차트 순위, 곡, 아티스트 크롤링해서 csv파일에 저장하기
 
+깃허브는 [여기](https://github.com/pyheejin/crawling.git)에서 확인할 수 있다
+
 ### BeautifulSoup
 설치하기
 ```terminal
