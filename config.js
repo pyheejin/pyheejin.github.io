@@ -40,6 +40,10 @@ module.exports = {
       path: '/category/algorithm'
     },
     {
+      label: 'Datebase',
+      path: '/category/database'
+    },
+    {
       label: 'About me',
       path: '/pages/about'
     },

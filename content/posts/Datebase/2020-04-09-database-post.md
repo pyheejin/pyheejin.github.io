@@ -4,10 +4,10 @@ date: "2020-04-09"
 template: "post"
 draft: false
 slug: "RDBMS"
-category: ""
+category: "database"
 tags:
   - "RDBMS"
-description: "RDBMS"
+description: "RDBMS, 트랜잭션, ACID"
 socialImage: ""
 ---
 
