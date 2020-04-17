@@ -239,6 +239,7 @@ urlpatterns = [
 테스트는 http -v 로 진행
 
 - 회원가입
+
 ```vim
 (wecode) ➜  westagram git:(master) ✗ http -v http://127.0.0.1:8000/user/sign-up name=user5 email=user5@user5.com password=1234
 POST /user/sign-up HTTP/1.1
@@ -266,6 +267,7 @@ X-Frame-Options: DENY
 ```
 
 - 로그인
+
 ```vim
 (wecode) ➜  westagram git:(master) ✗ http -v http://127.0.0.1:8000/user/login email=user5@user5.com password=1234
 POST /user/login HTTP/1.1
@@ -292,6 +294,7 @@ X-Frame-Options: DENY
 ```
 
 - 댓글 입력
+
 ```vim
 (wecode) ➜  westagram git:(master) ✗ http -v http://127.0.0.1:8000/comments name=user5 comment=hi
 POST /comments HTTP/1.1
