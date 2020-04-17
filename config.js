@@ -20,6 +20,10 @@ module.exports = {
       path: '/category/python'
     },
     {
+      label: 'Django',
+      path: '/category/django'
+    },
+    {
       label: 'JavaScript',
       path: '/category/javascript'
     },
