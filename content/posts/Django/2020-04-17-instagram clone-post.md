@@ -11,7 +11,7 @@ description: "장고로 인스타그램 클론 API 만들기"
 socialImage: ""
 ---
 
-### 1. 장고 설치
+### 1. 장고 설치 
 
 ```vim
 pip install django
