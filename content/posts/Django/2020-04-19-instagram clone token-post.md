@@ -3,7 +3,7 @@ title: 장고로 인스타그램 클론 API 만들기 - 인증/인가 로직 추
 date: "2020-04-19"
 template: "post"
 draft: false
-slug: "django-python-instagram-API"
+slug: "django-python-instagram-API-Authentication-Authorization"
 category: "django"
 tags:
   - "django"
