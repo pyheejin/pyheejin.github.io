@@ -3,7 +3,7 @@ title: 스타벅스 음료 파트 모델링
 date: "2020-04-21"
 template: "post"
 draft: false
-slug: "databa-modelling-to-stabucks"
+slug: "database-modelling-to-stabucks"
 category: "database"
 tags:
   - "modelling"
