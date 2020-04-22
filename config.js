@@ -48,6 +48,10 @@ module.exports = {
       path: '/category/database'
     },
     {
+      label: 'Vim',
+      path: '/category/vim'
+    },
+    {
       label: 'About me',
       path: '/pages/about'
     },
