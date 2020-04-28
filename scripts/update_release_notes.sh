@@ -14,7 +14,7 @@ fi
 if [ -z "$1" ]
 then
   REPO=$(git ls-remote --get-url origin | \
-  sed -u 's/git@//g; s/https:\/\///g; s/github.com\///g; s/\.git//g')
+  sed -u "s/git@//g; s/https:\/\///g; s/github.com\///g; s/\.git//g")
 else
   REPO=$1
 fi
@@ -33,10 +33,10 @@ PAYLOAD=$(
      --arg t "$TAG" \
      --arg n "$TAG" \
      --arg b "$BODY" \
-     '{ tag_name: $t, name: $n, body: $b}'
+     "{ tag_name: $t, name: $n, body: $b}"
 )
 
-TAG_ID=$(curl -s "https://api.github.com/repos/$REPO/releases/tags/$TAG" | jq -r '.id')
+TAG_ID=$(curl -s "https://api.github.com/repos/$REPO/releases/tags/$TAG" | jq -r ".id")
 
 curl --fail \
      --netrc \
