@@ -45,8 +45,8 @@ Model.objects.filter(id=2, title='hi')
 
 ### filter에 옵션 주기
 
-- exact : 값 매치
-- iexact : 대소문자 구분없이 값 매치
+- exact : 값 매칭
+- iexact : 대소문자 구분없이 값 매칭
 - startswith, istartswith : 해당 값으로 시작하는 결과 찾기
 - endswith, iendswith(대소문자를 구분하지 않음) : 해당 값으로 끝나는 결과 찾기
 - contains, icontains(대소문자를 구분하지 않음) : 값을 포함하는 결과 찾기
