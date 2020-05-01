@@ -130,6 +130,34 @@ X-Frame-Options: DENY
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NX0.izem9-_-gTJxFaRtz02SGfsv47B1TR3oAWyUVqVGj2U"
 }
 ```
+- 토큰이 필요한 api를 http -v로 테스트 할 때는 파라미터 다음에 Authorization과 토큰을 key:value 형식으로 입력해줘야 한다.<br>
+(http -v 10.58.5.93:8000/user/like product_id=12 Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NH0.qYvED5UbDl5UOUzXnBaeSVkx700y6UUP06LDcxdqtlY)
+
+```vim
+(base) ➜  Rolex-backend git:(feature/user) ✗ http -v 10.58.5.93:8000/user/like product_id=12 Authorization:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NH0.qYvED5UbDl5UOUzXnBaeSVkx700y6UUP06LDcxdqtlY
+POST /user/like HTTP/1.1
+Accept: application/json, */*
+Accept-Encoding: gzip, deflate
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NH0.qYvED5UbDl5UOUzXnBaeSVkx700y6UUP06LDcxdqtlY
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+Host: 10.58.5.93:8000
+User-Agent: HTTPie/2.0.0
+
+{
+    "product_id": "12"
+}
+
+HTTP/1.1 200 OK
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Fri, 01 May 2020 04:39:36 GMT
+Server: WSGIServer/0.2 CPython/3.7.7
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+```
 
 access_token을 복호화하면 유저 아이디를 확인할 수 있다. 아이디를 통해 유저 정보를 확인할 수 있다.
 

@@ -1,6 +1,6 @@
 ---
 title: QuerySet 사용하기
-date: "2020-04-29"
+date: "2020-05-01"
 template: "post"
 draft: false
 slug: "queryset"
