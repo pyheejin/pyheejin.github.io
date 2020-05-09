@@ -7,7 +7,7 @@ slug: "groupAnagrams"
 category: "algorithm"
 tags:
   - "groupAnagrams"
-description: "리스트가 주어졌을 때 같은 알파벳으로 이루어진 단어끼리 return"
+description: "리스트가 주어졌을 때 같은 알파벳으로 이루어진 단어끼리 return "
 socialImage: ""
 ---
 
