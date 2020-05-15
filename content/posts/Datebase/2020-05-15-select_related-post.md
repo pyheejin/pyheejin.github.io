@@ -4,7 +4,7 @@ date: "2020-05-15"
 template: "post"
 draft: false
 slug: "select_related"
-category: "database"
+category: "django"
 tags:
   - "select_related"
 description: "django select_related"
