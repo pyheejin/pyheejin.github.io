@@ -17,7 +17,7 @@ CREATE / ALTER / DROP
 
 1) 데이터 베이스 생성 구문
 CREATE DATABASE [database name] CHARACTER SET [character set];
-CREATE DATABASE mysql_test CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE test CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
 2) 테이블 작성/변경/삭제 Syntax
 CREATE TABLE [table] (column1, column2 …)
