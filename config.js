@@ -12,6 +12,14 @@ module.exports = {
   useKatex: false,
   menu: [
     {
+      label: "About me",
+      path: "/pages/about"
+    },
+    {
+      label: "Product",
+      path: "/pages/projects"
+    },
+    {
       label: "Articles",
       path: "/"
     },
@@ -50,14 +58,6 @@ module.exports = {
     {
       label: "Vim",
       path: "/category/vim"
-    },
-    {
-      label: "About me",
-      path: "/pages/about"
-    },
-    {
-      label: "Product",
-      path: "/pages/projects"
     }
   ],
   author: {
