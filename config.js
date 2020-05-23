@@ -24,6 +24,10 @@ module.exports = {
       path: "/"
     },
     {
+      label: "Wecode",
+      path: "/category/wecode"
+    },
+    {
       label: "Python",
       path: "/category/python"
     },
