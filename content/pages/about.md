@@ -43,6 +43,7 @@ socialImage: ""
 - 직접 배포 및 Elastic Beanstalk를 통해 프로젝트를 배포한 경험이 있습니다. 
 - 현재는 Docker를 공부하고 있습니다.
 
+
 # Project
 
 ## 비마이펫 프로젝트
