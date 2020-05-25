@@ -50,3 +50,17 @@ use mysql;
 select password(‘설정할 비밀번호‘);
 alter user’root’@‘localhost’ identified by ‘비밀번호’;
 ```
+
+### django 에서 runserver시 "Did you install mysqlclient?" 라고 나올 때
+1. settings.py 에 아래 내용 추가
+
+```python
+import pymysql
+pymysql.version_info = (1, 3, 13, "final", 0)
+pymysql.install_as_MySQLdb()
+```
+
+2. pip install pymysql 설치
+3. mariaDB 접속해서 database 생성
+create database insa character set utf8mb4 collate utf8mb4_general_ci;
+4. python manage.py migrate
