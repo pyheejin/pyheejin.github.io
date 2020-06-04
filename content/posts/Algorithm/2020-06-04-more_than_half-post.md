@@ -1,6 +1,6 @@
 ---
 title: 숫자로 이루어진 배열에서 과반수(majority, more than a half)가 넘은 숫자를 반환
-date: "2020-05-10"
+date: "2020-06-04"
 template: "post"
 draft: false
 slug: "more_than_half"
