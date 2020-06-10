@@ -11,8 +11,8 @@ description: "git branch 여러개 한번에 삭제"
 socialImage: ""
 ---
 
-### git branch | grep 'feature' | xargs git branch -D
-feature로 시작하는 브랜치 모두 삭제!
+### feature로 시작하는 브랜치 모두 삭제하기
+git branch | grep 'feature' | xargs git branch -D
 
 ```vim
 (base) ➜  ~ git:(master) git branch | grep 'feature' | xargs git branch -D
@@ -27,4 +27,10 @@ Deleted branch feature/reading_matchup (was 7e21e5d).
 Deleted branch feature/register (was 6df7941).
 Deleted branch feature/register2 (was 5dfd69f).
 Deleted branch feature/request_resume (was 6f2148c).
+```
+
+### master, develop 제외하고 merge된 모든 브랜치 삭제하기
+
+```vim
+git branch --merged | grep -v "\*" | grep -v master | grep -v develop | xargs -n 1 git branch -d
 ```
