@@ -1,6 +1,6 @@
 ---
 title: git branch 여러개 한번에 삭제
-date: "2020-05-12"
+date: "2020-06-11"
 template: "post"
 draft: false
 slug: "git-branch-all-delete"
