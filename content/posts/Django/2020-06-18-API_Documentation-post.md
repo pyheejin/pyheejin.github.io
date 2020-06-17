@@ -1,0 +1,26 @@
+---
+title: Python Django 한국시간으로 설정하기
+date: "2020-06-17"
+template: "post"
+draft: false
+slug: "Setting-to-Korean-time-in-django"
+category: "django"
+tags:
+  - "Setting-to-Korean-time-in-django"
+description: "Setting to Korean time in django"
+socialImage: ""
+---
+
+### settings.py
+- TIME_ZONE을 'Asia/Seoul'로 변경
+- USE_TZ을 False로 변경
+
+```python
+TIME_ZONE = 'Asia/Seoul'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = False
+```

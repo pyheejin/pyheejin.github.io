@@ -35,8 +35,8 @@ def getGPS_coordinates_for_KAKAO(address):
         }
     )
     api = requests.get("https://dapi.kakao.com/v2/local/search/address.json", headers=headers, params=p)
-    lat = api.json()['documents'][0]['x'] # 위도
-    lng = api.json()['documents'][0]['y'] # 경도
+    lat = api.json()['documents'][0]['x'] # 경도
+    lng = api.json()['documents'][0]['y'] # 위도
     result = [lat, lng]
     return result
 
@@ -59,8 +59,8 @@ print(getGPS_coordinate_for_KAKAO('강남대로 27'))
                 'region_3depth_h_name': '양재2동', 
                 'region_3depth_name': '양재동', 
                 'sub_address_no': '', 
-                'x': '127.039136433366', 
-                'y': '37.4682787075426'
+                'x': '127.039136433366', // 경도
+                'y': '37.4682787075426' // 위도
             }, 
             'address_name': 
             '서울 서초구 강남대로 27', 
