@@ -13,6 +13,7 @@ socialImage: ""
 
 ### API Documentation
 포스트맨에서 테스트 후 메뉴에서 Publish Docs를 선택 후 URL 클릭
+[링크](https://documenter.getpostman.com/view/11391187/SzzkbH3V?version=latest)
 
 ![api](../../../static/media/api_postman.png)
 
