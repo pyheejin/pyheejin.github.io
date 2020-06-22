@@ -34,7 +34,7 @@ REST 서버는 다중 계층으로 구성될 수 있으며 보안, 로드 밸런
 ### HTTP Method(CRUD)
 다음과 같은 식으로 URI는 자원을 표현하는 데에 집중하고 행위에 대한 정의는 HTTP METHOD를 통해 하는 것이 REST한 API를 설계하는 중심 규칙이다.
 |Method|Resource|
-|------|--------|
+|-|-|
 | POST |생성(Create)|
 | GET  |조회(Read)|
 | PUT  |전체수정(Update)-일부 데이터만 전달할 경우, 다른 필드는 초기화 됨|
