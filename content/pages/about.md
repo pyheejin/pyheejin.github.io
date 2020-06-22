@@ -6,14 +6,14 @@ socialImage: ""
 
 <img src='../../static/media/profile.JPG' width=400 height=400>
 
-## 안녕하세요
-주니어 개발자입니다.
-음악과 춤, 고양이를 좋아합니다.
+## 안녕하세요.
+주니어 개발자입니다. 새로운 것에 도전하는 것을 좋아합니다.
 
 ## 저는
-개발하는데에 있어서 로직을 잘 짜는것도 좋지만, 커뮤니케이션이 많아야 한다고 믿습니다.
-능숙한 분야가 아니더라도 업무에 필요하다면 적극적으로 탐색하여 최적의 결과를 낼 수 있도록 노력하고 있습니다.
+개발하는데에 있어서 로직을 잘 짜는것도 좋지만, 커뮤니케이션이 많아야 한다고 믿습니다. 
+능숙한 분야가 아니더라도 업무에 필요하다면 적극적으로 탐색하여 최적의 결과를 낼 수 있도록 노력하고 있습니다. 
 주도적인 업무 환경을 선호합니다.
+항상 체크리스트를 만들어서 스스로의 일정을 지키기 때문에 마감일을 넘기지 않습니다.
 
 ## 앞으로
 비즈니스의 가치를 높이는 개발자가 되는 것을 추구하고 있습니다.
@@ -24,7 +24,6 @@ socialImage: ""
 
 ### HTML/CSS
 - 시맨틱 마크업을 준수합니다.
-- 검색 엔진 최적화 경험이 있습니다.
 
 ### Python
 - 파이썬 언어의 기본적인 문법에 대해 알고 있습니다.
@@ -43,10 +42,13 @@ socialImage: ""
 - 직접 배포 및 Elastic Beanstalk를 통해 프로젝트를 배포한 경험이 있습니다. 
 - 현재는 Docker를 공부하고 있습니다.
 
+# WECODE
+3/23 ~ 6/19 동안 백엔드 과정으로 위코드에서 공부했습니다.
+아래 프로젝트는 위코드에서 진행한 그룹 프로젝트 입니다.
 
-# Project
+## Project
 
-## 비마이펫 프로젝트
+### 비마이펫 프로젝트
 ![bemypet](../../static/media/bemypet.png)
 
 - 반려견 동반으로 갈 수 있는 장소들을 한눈에 모아볼 수 있는 사이트
@@ -57,7 +59,7 @@ socialImage: ""
 '첫 프로젝트 잘해보자!' 했는데 크롤링 3일차에 사이트가 리뉴얼중이었는지 멈춰버려서, 
 엎어버린 비운의 0.5 프로젝트이다..
 
-## 롤렉스 프로젝트
+### 롤렉스 프로젝트
 ![bemypet](../../static/media/rolex.png)
 
 - 시계 브랜드
@@ -68,7 +70,7 @@ socialImage: ""
   - 나의 셀렉션(좋아요 기능)
 - 팀 구성
   - 프론트엔드 3명, 백엔드 3명
-  - [프론트엔드 Github](https://github.com/wecode-bootcamp-korea/Rolex-backend)
+  - [프론트엔드 Github](https://github.com/wecode-bootcamp-korea/Rolex-frontend)
   - [백엔드 Github](https://github.com/wecode-bootcamp-korea/Rolex-backend)
 - 적용 기술(백엔드)
   - Python
@@ -91,7 +93,7 @@ socialImage: ""
 위코드 수료전까지 완성시키는게 목표!!
 링크 -> [Github](https://github.com/pyheejin/rolex)
 
-## Willy 프로젝트
+### Willy 프로젝트
 ![willy](../../static/media/willy1.png)
 ![willy](../../static/media/willy2.png)
 ![willy](../../static/media/willy3.png)
