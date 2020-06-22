@@ -37,7 +37,8 @@ REST 서버는 다중 계층으로 구성될 수 있으며 보안, 로드 밸런
 |------|--------|
 | POST |생성(Create)|
 | GET  |조회(Read)|
-| PUT  |수정(Update)|
+| PUT  |전체수정(Update)-일부 데이터만 전달할 경우, 다른 필드는 초기화 됨|
+|PETCH |부분수정(Update)|
 |DELETE|삭제(Delete)|
 
 1. URL은 정보의 자원을 표현해야 한다.
@@ -47,9 +48,9 @@ DELETE /photo/1
 GET /photo/1
 POST /photo/2
 PUT /photo/1
-FETCH /photo/2
+PETCH /photo/2
 ```
-2. 자원에 대한 행위는 HTTP Method(GET, POST, PUT, FETCH, DELETE)로 표현한다.
+2. 자원에 대한 행위는 HTTP Method(GET, POST, PUT, PETCH, DELETE)로 표현한다.
 
 ### URL 설계시 주의할 점
 1. 슬래시 구분자(/)는 계층 관계를 나타내는데 사용
