@@ -11,11 +11,11 @@ description: "Competitive Gaming"
 socialImage: ""
 ---
 
-![api](../../../static/media/Competitive-Gaming1.png)
+![Competitive Gaming](../../../static/media/Competitive-Gaming1.png)
 
-![api](../../../static/media/Competitive-Gaming2.png)
+![Competitive Gaming](../../../static/media/Competitive-Gaming2.png)
 
-![api](../../../static/media/Competitive-Gaming3.png)
+![Competitive Gaming](../../../static/media/Competitive-Gaming3.png)
 
 ```python
 def numPlayers(k, scores):
