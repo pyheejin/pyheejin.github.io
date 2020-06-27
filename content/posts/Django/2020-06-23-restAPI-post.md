@@ -11,8 +11,9 @@ description: "Rest-API"
 socialImage: ""
 ---
 # REST란?
-Representational State Transfer의 약자로 URI(Uniform Resource Identifier)을 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다 <br>
-즉, 자원 기반의 구조설계의 중심에 Resource가 있고 HTTP Method를 통해 Resource를 처리하도록 설계된 아키텍쳐를 말한다.
+Representational State Transfer의 약자로 웹의 장점을 최대한으로 활용할 수 있는 아키텍쳐이다. <br> URI(Uniform Resource Identifier)을 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다 <br>
+즉, 자원 기반의 구조설계의 중심에 Resource가 있고 HTTP Method를 통해 Resource를 처리하도록 설계된 아키텍쳐를 말한다. <br>
+Hypermedia API의 기본을 충실히 지키면서 범용성을 보장한다.
 
 ## REST 구성
 - 자원(Resource) : 데이터(문서, 그림, 데이터, 해당 소프트웨어 자체 등)
@@ -34,7 +35,7 @@ Representational State Transfer의 약자로 URI(Uniform Resource Identifier)을
 Uniform Interface는 URI로 지정한 리소스에 대한 조작을 통일되고 한정적인 인터페이스로 수행하는 아키텍처 스타일
 2. Stateless (무상태성)<br>
 작업을 위한 상태정보를 따로 저장하고 관리하지 않는다. 세션 정보나 쿠키정보를 별도로 저장하고 관리하지 않기 때문에 API 서버는 들어오는 요청만을 단순히 처리, 때문에 서비스의 자유도가 높아지고 서버에서 불필요한 정보를 관리하지 않음으로써 구현이 단순해짐
-3. Cacheable (캐시 가능)<br>
+3. Cacheable (캐시 처리 기능)<br>
 REST의 가장 큰 특징 중 하나는 HTTP라는 기존 웹표준을 그대로 사용하기 때문에 웹에서 사용하는 기존 인프라를 그대로 활용이 가능, 따라서 HTTP가 가진 캐싱 기능을 적용 가능하다. HTTP 프로토콜 표준에서 사용하는 Last-Modified태그나 E-Tag를 이용하면 캐싱 구현이 가능하다
 4. Self-descriptiveness (자체 표현 구조)<br>
 REST API 메시지만 보고도 이를 쉽게 이해 할 수 있는 자체 표현 구조로 되어 있다
