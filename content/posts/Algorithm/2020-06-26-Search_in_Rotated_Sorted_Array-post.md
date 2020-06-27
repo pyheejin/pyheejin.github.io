@@ -38,7 +38,7 @@ Output: -1
 
 ```python
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    def search(self, nums, target):
         try:
             return nums.index(target)
         except ValueError:
