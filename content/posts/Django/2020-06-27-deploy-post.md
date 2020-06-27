@@ -145,3 +145,113 @@ mysql -h [엔드포인트 : wanted.cubp7i1omocs.ap-northeast-2.rds.amazonaws.com
 데이터가 잘 들어갔는지 확인
 ![rds](../../../static/RDS/rds_23.png)
 <br>
+
+# EC2 RDS 연동 gunicorn 배포
+
+```vim
+// 접속
+ssh -i wanted.pem ubuntu@13.124.188.99
+// 미니콘다 설치
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+// 미니콘다 파일 권한 변경
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+// 미니콘다 파일 실행
+./Miniconda3-latest-Linux-x86_64.sh
+```
+![rds](../../../static/gunicorn/deploy_1.png)
+<br>
+
+```vim
+// 가상환경 실행
+source .bashrc
+// apt-get 업데이트
+sudo apt-get update
+```
+![rds](../../../static/gunicorn/deploy_2.png)
+<br>
+
+```vim
+// gcc 설치
+sudo apt-get install gcc
+```
+![rds](../../../static/gunicorn/deploy_3.png)
+<br>
+
+```vim
+// sql client 설치
+sudo apt-get install libmysqlclient-dev
+```
+![rds](../../../static/gunicorn/deploy_4.png)
+<br>
+
+conda 가상환경 생성, 활성화
+```vim
+conda create -n wanted python=3.7
+conda activate wanted
+```
+<br>
+
+clone
+```vim
+git clone https://github.com/[계정]/[repository name]
+```
+<br>
+
+requirements 설치
+```vim
+pip install -r requirements.txt
+```
+<br>
+
+settings.py 에서 ip 수정
+<br>
+
+config.py 파일 생성
+
+```python
+SECRET = {
+        'SECRET_KEY' : 'SECRET_KEY'
+}
+
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'database name',
+    'USER': 'user name',
+    'PASSWORD': 'password',
+    'HOST': 'rds 엔드포인트',
+    'PORT': '3306',
+    'OPTIONS': {'charset': 'utf8mb4'},
+    'TEST': {
+      'CHARSET': 'utf8',
+      'COLLATION': 'utf8_general_ci'
+    }
+  }
+}
+```
+
+서버가 동작하는지 확인
+```vim
+python manage.py runserver 0:8000
+```
+<br>
+
+gunicorn 설치
+```vim
+pip install gunicorn
+```
+<br>
+
+```vim
+nohup gunicorn --bind=0.0.0.0:8000 insa.wsgi &
+```
+![rds](../../../static/gunicorn/deploy_5.png)
+<br>
+
+```vim
+// gunicorn이 실행되고 있는지 확인
+ps -ef | grep python
+// 프로세서 종료
+kill 24696
+```
+![rds](../../../static/gunicorn/deploy_6.png)
