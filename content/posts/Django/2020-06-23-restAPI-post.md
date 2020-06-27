@@ -10,11 +10,24 @@ tags:
 description: "Rest-API"
 socialImage: ""
 ---
+# REST란?
+Representational State Transfer의 약자로 URI(Uniform Resource Identifier)을 통해 자원(Resource)을 명시하고, HTTP Method(POST, GET, PUT, DELETE)를 통해 해당 자원에 대한 CRUD Operation을 적용하는 것을 의미한다 <br>
+즉, 자원 기반의 구조설계의 중심에 Resource가 있고 HTTP Method를 통해 Resource를 처리하도록 설계된 아키텍쳐를 말한다.
 
 ## REST 구성
-- 자원(Resource) : URL
+- 자원(Resource) : 데이터(문서, 그림, 데이터, 해당 소프트웨어 자체 등)
 - 행위(Verb) : HTTP Method
 - 표현(Representations)
+
+## REST의 장단점
+- 장점
+  - HTTP 프로토콜의 인프라를 그대로 사용하므로 REST API 사용을 위한 별도 인프라를 구출할 필요가 없다.
+  - HTTP 표준 프로토콜에 따르는 모든 플랫폼에서 사용이 가능하다.
+  - REST API 메시지가 의도하는 바를 명확하게 나타내므로 의도하는 바를 쉽게 파악할 수 있다.
+  - 서버와 클라이언트의 역할을 명확하게 분리한다
+- 단점
+  - 사용할 수 있는 메소드가 제한적이다.
+  - 모든 브라우저에서 지원되지 않는다.
 
 ## REST 특징
 1. Uniform Interface(유니폼 인터페이스)<br>
