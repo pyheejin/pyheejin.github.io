@@ -57,3 +57,91 @@ socialImage: ""
     ssh -i wanted.pem ubuntu@13.124.188.99
     ```
     ![ec2](../../../static/EC2/ec2_10.png)
+
+## RDS 생성
+
+![rds](../../../static/RDS/rds_1.png)
+<br>
+
+![rds](../../../static/RDS/rds_2.png)
+<br>
+
+![rds](../../../static/RDS/rds_3.png)
+<br>
+
+![rds](../../../static/RDS/rds_4.png)
+<br>
+
+![rds](../../../static/RDS/rds_5.png)
+<br>
+
+![rds](../../../static/RDS/rds_6.png)
+<br>
+
+![rds](../../../static/RDS/rds_7.png)
+<br>
+
+![rds](../../../static/RDS/rds_8.png)
+<br>
+
+![rds](../../../static/RDS/rds_9.png)
+<br>
+
+![rds](../../../static/RDS/rds_10.png)
+<br>
+
+![rds](../../../static/RDS/rds_11.png)
+<br>
+
+![rds](../../../static/RDS/rds_12.png)
+<br>
+
+![rds](../../../static/RDS/rds_13.png)
+<br>
+
+![rds](../../../static/RDS/rds_14.png)
+<br>
+
+![rds](../../../static/RDS/rds_15.png)
+<br>
+
+![rds](../../../static/RDS/rds_16.png)
+<br>
+
+![rds](../../../static/RDS/rds_17.png)
+<br>
+
+![rds](../../../static/RDS/rds_18.png)
+<br>
+
+엔드포인트로 접속
+
+```vim
+mysql -h [엔드포인트 : wanted.cubp7i1omocs.ap-northeast-2.rds.amazonaws.com] -u [DB 인스턴스 식별자 : root] -p
+```
+![rds](../../../static/RDS/rds_19.png)
+<br>
+
+로컬 DB에서 dump 뜨기
+
+```vim
+mysqldump -u root -p [현재 DB명 : insa] > [dump 뜰 파일 이름 : wanted.sql]
+```
+![rds](../../../static/RDS/rds_20.png)
+<br>
+
+RDS로 데이터 넣기
+
+```vim
+mysql -h [엔드포인트 : wanted.cubp7i1omocs.ap-northeast-2.rds.amazonaws.com] -u pyheejin -p [RDS에서 만든 DB명 : wanted] < [dump뜰 때 만든 파일 :wanted.sql]
+```
+![rds](../../../static/RDS/rds_21.png)
+<br>
+
+테이블이 잘 만들어졌는지 확인
+![rds](../../../static/RDS/rds_22.png)
+<br>
+
+데이터가 잘 들어갔는지 확인
+![rds](../../../static/RDS/rds_23.png)
+<br>
