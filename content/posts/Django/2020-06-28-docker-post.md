@@ -12,8 +12,8 @@ socialImage: ""
 ---
 
 ## 설치
-- mac & window
-[docker download link](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+- mac & window <br>
+[docker download link](https://hub.docker.com/editions/community/docker-ce-desktop-mac) <br>
 클라이언트 다운로드 및 설치하면 완료!
 <br>
 
