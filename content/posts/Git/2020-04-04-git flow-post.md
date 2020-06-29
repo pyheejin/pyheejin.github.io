@@ -1,17 +1,15 @@
 ---
-title: git cycle
+title: git flow
 date: "2020-04-04"
 template: "post"
 draft: false
-slug: "git-cycle"
+slug: "git-flow"
 category: "git"
 tags:
   - "git"
-description: "git cycle"
+description: "git flow"
 socialImage: ""
 ---
-
-### git cycle
 
 1. git clone 주소
 2. 해당 레포 디렉토리로 접속
@@ -27,5 +25,3 @@ socialImage: ""
 12. git push -u origin develop
 13. git checkout master
 14. git push -u origin master
-
-
