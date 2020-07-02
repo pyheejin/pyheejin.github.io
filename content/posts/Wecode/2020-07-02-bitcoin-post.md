@@ -3,7 +3,7 @@ title: 비트코인 관련 용어 정리
 date: "2020-07-02"
 template: "post"
 draft: false
-slug: ""
+slug: "bitcoin"
 category: "wecode"
 tags:
   - "bitcoin"
