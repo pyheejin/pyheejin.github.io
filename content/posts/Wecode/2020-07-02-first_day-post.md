@@ -6,7 +6,7 @@ draft: false
 slug: ""
 category: "wecode"
 tags:
-  - "wecode"
+  - "bitcoin"
 description: ""
 socialImage: ""
 ---
