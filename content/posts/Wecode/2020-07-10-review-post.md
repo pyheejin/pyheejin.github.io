@@ -7,6 +7,11 @@ slug: "wecode-review"
 category: "wecode"
 tags:
   - "wecode-review"
+  - "#wecode" 
+  - "#위코드"
+  - "#코딩부트캠프"
+  - "#codingbootcamp"
+
 description: "위코드 3개월의 후기(비전공자에서 개발자까지)"
 socialImage: ""
 ---
