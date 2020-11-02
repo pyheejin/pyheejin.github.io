@@ -62,6 +62,10 @@ module.exports = {
     {
       label: "Vim",
       path: "/category/vim"
+    },
+    {
+      label: "AWS",
+      path: "/category/aws"
     }
   ],
   author: {
