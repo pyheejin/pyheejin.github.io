@@ -27,6 +27,7 @@ STATICFILES_DIRS = (
 
 ## STATIC_URL
 웹 페이지에서 사용할 정적 파일의 최상위 URL 경로이다.<br>
+템플릿 태그 {% static 'image/image1.jpg' %} 에 의해 참조되는 설정<br>
 (문자열은 반드시 /로 끝나야 함)
 
 ```python
