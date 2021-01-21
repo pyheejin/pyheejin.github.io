@@ -31,9 +31,12 @@ Model.query.filter(Model.name == 'john').all()
 Model.query.filter(Model.name == 'john', Model.hobby == 'music')
 
 # or
-from sqlalchemy import or_
+from sqlalchemy import or_, and_
 # SELECT * FORM model WHERE name = 'john' OR hobby = music
 Model.query.filter(or_(Model.name == 'john', Model.hobby == 'music'))
+
+# SELECT * FORM model WHERE name = 'john' AND hobby = music
+Model.query.filter(and_(Model.name == 'john', Model.hobby == 'music'))
 ```
 
 ## INSERT
@@ -51,11 +54,11 @@ def post(key=None, set=None, rules=None):
 
 name = post('name', '')
 
-user = Model()
-user.name = name
-db.session.add(user)
+model = Model()
+model.name = name
+db.session.add(model)
 
-user = Model(name='john', age=20)
+model = Model(name='john', age=20)
 session.add(user)
 session.commit()
 ```
@@ -63,15 +66,15 @@ session.commit()
 ## UPDATE
 
 ```python
-user = Model.query.filter(Model.name == 'john').first()
-user.name = 'Amelia'
+model = Model.query.filter(Model.name == 'john').first()
+model.name = 'Amelia'
 session.commit()
 ```
 
 ## DELETE
 
 ```python
-user = Model.query.filter(Model.name == 'Amelia').first()
+model = Model.query.filter(Model.name == 'Amelia').first()
 session.delete(user)
 session.commit()
 ```
@@ -85,6 +88,12 @@ model = Model.query.order_by(*order_filter)
 Model.query.filter(Model.name == 'Amelia').order_by(Model.created_at.asc())
 ```
 
+## GROUP BY
+
+```python
+model = Model.query.group_by(Model.id).all()
+```
+
 ## SEARCH(LIKE)
 
 ```python
@@ -94,6 +103,21 @@ Model.query.filter(Model.name.like(f'{jo}%'))
 Model.query.filter(Model.name.like(f'%{jo}'))
 # jo가 포함되어있는 사람 검색
 Model.query.filter(Model.name.like(f'%{jo}%'))
+```
+
+## SUBQUERY
+
+```python
+from sqlalchemy import subquery
+
+sub = query.session(Model2).filter(Model2.grade == 'A').subquery() 
+# SELECT id, grade FROM model2 WHERE grade = 'A'
+
+session.query(Model1, sub.c.id, sub.c.grade).outerjoin(sub, sub.c.id = Model1.id)
+	
+# SELECT model1.*, model2.id, model2.grade
+# FROM mode1l LEFT JOIN (SELECT id, grade FROM model2 WHERE grade = 'A') model2 
+# ON model1.id = model2.id
 ```
 
 ## DATE 계산하기
