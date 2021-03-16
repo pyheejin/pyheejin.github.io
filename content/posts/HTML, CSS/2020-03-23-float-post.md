@@ -4,7 +4,7 @@ date: "2020-03-23"
 template: "post"
 draft: false
 slug: "css float"
-category: "htmlcss"
+category: "html/css"
 tags:
   - "css"
   - "float"
@@ -17,63 +17,63 @@ socialImage: ""
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>float</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>float</title>
 
-        <style>
-            hr {
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
+    <style>
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
 
-            .none1 {
-                border: 1px solid red;
-                margin-bottom: 2px;
-            }
+        .none1 {
+            border: 1px solid #ff0000;
+            margin-bottom: 2px;
+        }
 
-            .none2 {
-                border: 1px solid green;
-            }
+        .none2 {
+            border: 1px solid green;
+        }
 
-            .float1 {
-                border: 1px solid pink;
-                float: left;
-            }
+        .float1 {
+            border: 1px solid pink;
+            float: left;
+        }
 
-            .float2 {
-                border: 1px solid blue;
-            }
+        .float2 {
+            border: 1px solid blue;
+        }
 
-            .float3 {
-                border: 1px solid saddlebrown;
-                float: right;
-            }
+        .float3 {
+            border: 1px solid saddlebrown;
+            float: right;
+        }
 
-            .float4 {
-                border: 1px solid skyblue;
-                float: right;
-            }
-        </style>
-    </head>
+        .float4 {
+            border: 1px solid skyblue;
+            float: right;
+        }
+    </style>
+</head>
 
-    <body>
-        <div class="none1">float none</div>
-        <div class="none2">float none</div>
+<body>
+<div class="none1">float none</div>
+<div class="none2">float none</div>
 
-        <hr>
+<hr>
 
-        <!-- 앞 요소만 float 속성을 가질 때 -->
-        <div class="float1">float1</div>
-        <div class="float2">float2</div>
+<!-- 앞 요소만 float 속성을 가질 때 -->
+<div class="float1">float1</div>
+<div class="float2">float2</div>
 
-        <hr>
+<hr>
 
-        <!-- 두 요소 모두 float 속성을 가질 때 -->
-        <div class="float3">float3</div>
-        <div class="float4">float4</div>
-    </body>
+<!-- 두 요소 모두 float 속성을 가질 때 -->
+<div class="float3">float3</div>
+<div class="float4">float4</div>
+</body>
 </html>
 ```
 
