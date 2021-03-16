@@ -1,15 +1,15 @@
 ---
-title: Flask SQLAlchemy ORM
+title: Flask SQLAlchemy ORM 기본 문법
 date: "2020-12-09"
 template: "post"
 draft: false
-slug: "Flask-SQLAlchemy-ORM"
+slug: "Flask-SQLAlchemy-ORM-basic"
 category: "flask"
 tags:
   - "Flask"
   - "SQLAlchemy"
   - "ORM"
-description: "Flask SQLAlchemy ORM"
+description: "Flask SQLAlchemy ORM 기본 문법"
 socialImage: ""
 ---
 
