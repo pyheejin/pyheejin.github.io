@@ -25,51 +25,51 @@ module.exports = {
     },
     {
       label: "Wecode",
-      path: "/wecode"
+      path: "/category/wecode"
     },
     {
       label: "Python",
-      path: "/python"
+      path: "/category/python"
     },
     {
       label: "Django",
-      path: "/django"
+      path: "/category/django"
     },
     {
       label: "Flask",
-      path: "/flask"
+      path: "/category/flask"
     },
     {
       label: "JavaScript",
-      path: "/javascript"
+      path: "/category/javascript"
     },
     {
       label: "HTML/CSS",
-      path: "/html/css"
+      path: "/category/html/css"
     },
     {
       label: "WEB",
-      path: "/web"
+      path: "/category/web"
     },
     {
       label: "Git",
-      path: "/git"
+      path: "/category/git"
     },
     {
       label: "Algorithm",
-      path: "/algorithm"
+      path: "/category/algorithm"
     },
     {
       label: "Datebase",
-      path: "/database"
+      path: "/category/database"
     },
     {
       label: "Vim",
-      path: "/vim"
+      path: "/category/vim"
     },
     {
       label: "AWS",
-      path: "/aws"
+      path: "/category/aws"
     }
   ],
   author: {
