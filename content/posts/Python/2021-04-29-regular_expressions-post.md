@@ -27,6 +27,7 @@ for i in keyword:
 ```
 
 - 나중에 다시 짠 정규 표현식으로 특수문자 확인하는 코드
+
 ```python
 import re
 
