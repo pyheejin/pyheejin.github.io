@@ -9,7 +9,6 @@ tags:
   - "gunicorn"
   - "deploy"
 description: "Gunicorn Setting"
-socialImage: ""
 ---
 
 # 설치

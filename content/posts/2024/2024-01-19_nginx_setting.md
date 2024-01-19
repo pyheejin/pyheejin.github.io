@@ -9,7 +9,6 @@ tags:
   - "nginx"
   - "deploy"
 description: "Nginx Setting"
-socialImage: ""
 ---
 
 # 설치

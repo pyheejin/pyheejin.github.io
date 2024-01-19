@@ -13,6 +13,10 @@
       "path": "/"
     },
     {
+      "label": "Python",
+      "path": "/category/python"
+    },
+    {
       "label": "FastAPI",
       "path": "/category/fastapi"
     },

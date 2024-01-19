@@ -9,7 +9,6 @@ tags:
   - "ubuntu"
   - "hostname"
 description: "Change ubuntu hostname"
-socialImage: ""
 ---
 
 

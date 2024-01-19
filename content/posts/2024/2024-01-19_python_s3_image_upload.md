@@ -6,13 +6,13 @@ draft: false
 slug: "/posts/fastapi-s3-async"
 category: "FastAPI"
 tags:
-  - "FastAPI"
-  - "S3"
-  - "Async"
-  - "Image"
-  - "Upload"
+  - "fastapi"
+  - "s3"
+  - "async"
+  - "image"
+  - "file"
+  - "upload"
 description: ""
-socialImage: ""
 ---
 
 # 설치

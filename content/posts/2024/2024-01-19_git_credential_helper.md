@@ -9,7 +9,6 @@ tags:
   - "git"
   - "credential"
 description: "git credential helper"
-socialImage: ""
 ---
 
 
