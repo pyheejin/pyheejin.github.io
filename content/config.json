@@ -17,6 +17,14 @@
       "path": "/category/deploy"
     },
     {
+      "label": "Ubuntu",
+      "path": "/category/ubuntu"
+    },
+    {
+      "label": "Git",
+      "path": "/category/git"
+    },
+    {
       "label": "About me",
       "path": "/pages/about"
     },

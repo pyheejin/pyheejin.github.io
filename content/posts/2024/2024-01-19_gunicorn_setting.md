@@ -1,5 +1,5 @@
 ---
-title: Gunicorn Setting
+title: 구니콘 설정
 date: "2024-01-19"
 template: "post"
 draft: false
