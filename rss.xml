@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Heejin]]></title><description><![CDATA[Blog by Heejin]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 19 Jan 2024 04:54:29 GMT</lastBuildDate><item><title><![CDATA[Gunicorn Setting]]></title><description><![CDATA[Gunicorn Setting]]></description><link>https://pyheejin.github.io//posts/gunicorn-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/gunicorn-setting</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;pip install gunicorn&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;run&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#run&quot; aria-label=&quot;run permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Run&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;gunicorn --bind 0:8000 main:app --worker-class uvicorn.workers.UvicornWorker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%A0%95&quot; aria-label=&quot;설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설정&lt;/h1&gt;
+&lt;h3 id=&quot;gunicorn&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#gunicorn&quot; aria-label=&quot;gunicorn permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;gunicorn&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;socket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/systemd/system/gunicorn.socket&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn.sock
+
+[Install]
+WantedBy=sockets.target&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;service&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;공식 문서에서 권장하는 worker와 thread의 개수 : 2 * $NUM_CPU + 1&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/systemd/system/gunicorn.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/[Project file path]
+ExecStart=/usr/bin/gunicorn(구니콘 설치 경로) \
+					--workers 1 --thread 1 \
+					--worker-class uvicorn.workers.UvicornWorker \
+					--bind unix:/tmp/myapi.sock \
+					main:app \
+					--log-config /home/ubuntu/logs/log_format.ini
+
+[Install]
+WantedBy=multi-user.target&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;access_log, error_log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /home/ubuntu/logs/log_format.ini&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[loggers]
+keys=root
+
+[handlers]
+keys=access_logfile,error_logfile
+
+[formatters]
+keys=logfileformatter
+
+[logger_root]
+level=INFO
+handlers=access_logfile
+
+[formatter_logfileformatter]
+format=[%(asctime)s] %(levelname)s [%(thread)d] - %(message)s
+datefmt=%Y-%m-%d %H:%M:%S
+suffix=%Y-%m-%d.log
+class=logging.Formatter
+
+[handler_access_logfile]
+class=handlers.TimedRotatingFileHandler
+level=INFO
+args=(&apos;/home/ubuntu/logs/gunicorn/gunicorn_access.log&apos;,&apos;midnight&apos;)
+formatter=logfileformatter
+
+[handler_error_logfile]
+class=handlers.TimedRotatingFileHandler
+level=WARNING
+args=(&apos;/home/ubuntu/logs/gunicorn/gunicorn_error.log&apos;,&apos;midnight&apos;)
+formatter=logfileformatter&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%ED%96%89&quot; aria-label=&quot;실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실행&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;서비스 파일 변경시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl daemon-reload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;시스템 재 시작시 Gunicorn 자동 시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl enable gunicorn.service gunicorn.socket&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Gunicorn 서비스 시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl restart gunicorn.service gunicorn.socket&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Gunicorn 서비스 상태 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl status gunicorn.service gunicorn.socket&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Nginx Setting]]></title><description><![CDATA[Nginx Setting]]></description><link>https://pyheejin.github.io//posts/nginx-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/nginx-setting</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo apt-get update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo apt-get install nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%A0%95&quot; aria-label=&quot;설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설정&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/sites-available/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
+    listen 80;
+    server_name [Public IP주소 or 도메인];
+
+    charset utf-8;
+     client_max_body_size 100M;
+
+    location / {
+        real_ip_header X-Forwarded-For;
+        set_real_ip_from 0.0.0.0/0;
+
+        access_log /home/ubuntu/logs/nginx/nginx_access.log;
+        error_log  /home/ubuntu/logs/nginx/nginx_error.log;
+
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;nginx-문법-오류-확인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-%EB%AC%B8%EB%B2%95-%EC%98%A4%EB%A5%98-%ED%99%95%EC%9D%B8&quot; aria-label=&quot;nginx 문법 오류 확인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;nginx 문법 오류 확인&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo nginx -t&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;심볼릭-링크-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%AC%EB%B3%BC%EB%A6%AD-%EB%A7%81%ED%81%AC-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;심볼릭 링크 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;심볼릭 링크 설정&lt;/h1&gt;
+&lt;p&gt;에러나면 -f 옵션을 붙여서 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%ED%96%89&quot; aria-label=&quot;실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실행&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;nginx 서비스 재시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl restart nginx.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;nginx 서비스 상태 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl status nginx.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user root;
+worker_processes auto;
+pid /var/run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    include /etc/nginx/conf.d/*.conf;  // server파일 분리해서 가져옴
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/conf.d/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
+    listen 80;
+    server_name [Public IP주소 or 도메인];
+
+    charset utf-8;
+    client_max_body_size 100M;
+
+    location / {
+        real_ip_header X-Forwarded-For;
+        set_real_ip_from 0.0.0.0/0;
+
+        access_log /home/ubuntu/logs/nginx/nginx_access.log;
+        error_log  /home/ubuntu/logs/nginx/nginx_error.log;
+
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
