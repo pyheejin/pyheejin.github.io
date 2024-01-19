@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"group":[{"fieldValue":"deploy","totalCount":2},{"fieldValue":"gunicorn","totalCount":1},{"fieldValue":"nginx","totalCount":1}]}}}
+{"data":{"allMarkdownRemark":{"group":[{"fieldValue":"credential","totalCount":1},{"fieldValue":"deploy","totalCount":2},{"fieldValue":"git","totalCount":1},{"fieldValue":"gunicorn","totalCount":1},{"fieldValue":"hostname","totalCount":1},{"fieldValue":"nginx","totalCount":1},{"fieldValue":"ubuntu","totalCount":1}]}}}
