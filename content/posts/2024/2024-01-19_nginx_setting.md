@@ -1,5 +1,5 @@
 ---
-title: Nginx Setting
+title: Nginx 설정
 date: "2024-01-19"
 template: "post"
 draft: false
