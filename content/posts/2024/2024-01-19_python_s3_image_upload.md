@@ -51,6 +51,34 @@ def s3_connection():
 s3 = s3_connection()
 
 
+def upload_file(file, bucket, bucket_folder, object_name=None):
+    """
+    file: 업로드 할 파일
+    bucket: 업로드 될 버킷
+    object_name: S3 객체 이름, 없으면 file_name 사용
+    """
+
+    # S3 객체 이름이 정의 되지 않으면, file.filename 사용
+    if object_name is None:
+        object_name = file.filename
+
+    # 저장할 버킷 폴더 선택
+    object_key = f"{bucket_folder}/{object_name}"
+    try:
+        s3.upload_file(
+            file,
+            bucket,
+            object_key,
+            ExtraArgs={"ContentType": "image/jpg", "ACL": "public-read"},
+        )
+    except Exception as e:
+        print(e)
+    else:
+        file_path = f'https://vukapro.s3.ap-northeast-2.amazonaws.com/{bucket_folder}/'
+        image_url = f'https://vukapro.s3.ap-northeast-2.amazonaws.com/{object_key}'
+        return file_path, image_url
+
+
 def upload_file_async(file: UploadFile, bucket_folder, object_name=None):
     """
     file: 업로드 할 파일
@@ -114,8 +142,9 @@ async def image_upload(request, folder, filename):
 
 - controller.py
 ```python
-for idx, image in enumerate(request.image_files):
-    file_path, image_url = await image_upload(request=image,
-                                              folder='folder',
-                                              filename='filename')
+def image_controller(request):
+    for idx, image in enumerate(request.image_files):
+        file_path, image_url = await image_upload(request=image,
+                                                  folder='folder',
+                                                  filename='filename')
 ```
