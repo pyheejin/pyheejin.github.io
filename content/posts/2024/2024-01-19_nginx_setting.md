@@ -37,7 +37,7 @@ server {
 
         log_format custom '[$time_local] $remote_addr - [$status] "$request_time" - "$request"';
         access_log /home/ubuntu/logs/nginx-access/access.log custom;
-	      error_log  /home/ubuntu/logs/nginx-error/error.log;
+        error_log  /home/ubuntu/logs/nginx-error/error.log;
 
         include proxy_params;
         proxy_pass http://unix:/run/gunicorn.sock;
@@ -110,9 +110,6 @@ server {
     location / {
         real_ip_header X-Forwarded-For;
         set_real_ip_from 0.0.0.0/0;
-
-        access_log /home/ubuntu/logs/nginx/nginx_access.log;
-        error_log  /home/ubuntu/logs/nginx/nginx_error.log;
 
         include proxy_params;
         proxy_pass http://unix:/run/gunicorn.sock;
