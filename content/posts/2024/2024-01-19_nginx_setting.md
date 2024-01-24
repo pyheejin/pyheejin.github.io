@@ -71,6 +71,72 @@ sudo systemctl restart nginx.service
 sudo systemctl status nginx.service
 ```
 
+# SSL(HTTPS) 적용
+1. 도메인 인증서, 체인 인증서, 루트 인증서 파일 합치기
+```commandline
+cat [도메인 인증서] [체인 인증서] [루트 인증서] > [새로운 파일명.pem]
+```
+2. 개인 키 암호 해제
+> (----BEGIN RSA PRIVATE KEY---— 로 되어있으면 ----BEGIN PRIVATE KEY---—로 암호 해제를 해줘야 함)
+```commandline
+openssl rsa -in [개인키 파일] -out public.pem
+```
+3. nginx 설정
+```commandline
+sudo vi /etc/nginx/sites-available/nginx.conf
+```
+```commandline
+server {
+    listen 80;
+    server_name 도메인;
+
+    charset utf-8;
+    client_max_body_size 100M;
+
+    location / {
+        real_ip_header X-Forwarded-For;
+        set_real_ip_from 0.0.0.0/0;
+
+        access_log /home/ubuntu/logs/nginx/nginx_access.log;
+        error_log  /home/ubuntu/logs/nginx/nginx_error.log;
+
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+    # http로 접근했을 때 https로 리다이렉트
+    return 301 https://$host$request_uri;
+}
+
+# 블록 추가
+server {
+    listen 443 ssl;
+    server_name 도메인;
+
+    ssl_certificate [도메인 인증서, 체인 인증서, 루트 인증서 합친 파일의 경로];
+    ssl_certificate_key [암호 해제한 개인 키 파일 경로];
+
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache shared:SSL:1m;
+    ssl_session_timeout 5m;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    charset utf-8;
+    client_max_body_size 100M;
+
+    location / {
+        real_ip_header X-Forwarded-For;
+        set_real_ip_from 0.0.0.0/0;
+
+        log_format custom '[$time_local] $remote_addr - [$status] "$request_time" - "$request"';
+        access_log /home/ubuntu/logs/nginx-access/access.log custom;
+        error_log  /home/ubuntu/logs/nginx-error/error.log;
+
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+```
+
 <hr>
 
 ```commandline

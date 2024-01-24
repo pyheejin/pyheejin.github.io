@@ -40,7 +40,7 @@ WantedBy=sockets.target
 ```
 
 - service
-공식 문서에서 권장하는 worker와 thread의 개수 : 2 * $NUM_CPU + 1
+> <b>공식 문서에서 권장하는 worker와 thread의 개수 : 2 * $NUM_CPU + 1</b>
 ```commandline
 sudo vi /etc/systemd/system/gunicorn.service
 ```
