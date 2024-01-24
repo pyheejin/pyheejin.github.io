@@ -25,6 +25,10 @@
       "path": "/category/deploy"
     },
     {
+      "label": "AWS",
+      "path": "/category/aws"
+    },
+    {
       "label": "Ubuntu",
       "path": "/category/ubuntu"
     },
