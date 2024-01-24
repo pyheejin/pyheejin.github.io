@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Heejin]]></title><description><![CDATA[Blog by Heejin]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 23 Jan 2024 08:36:29 GMT</lastBuildDate><item><title><![CDATA[파이썬 로그 남기기]]></title><description><![CDATA[python logger]]></description><link>https://pyheejin.github.io//posts/python-logger</link><guid isPermaLink="false">https://pyheejin.github.io//posts/python-logger</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Heejin]]></title><description><![CDATA[Blog by Heejin]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 24 Jan 2024 01:29:01 GMT</lastBuildDate><item><title><![CDATA[Boto3로 CloudWatch에서 메트릭 데이터 가져오기]]></title><description><![CDATA[aws get metric data with boto3]]></description><link>https://pyheejin.github.io//posts/aws-cloud-watch-metric-data</link><guid isPermaLink="false">https://pyheejin.github.io//posts/aws-cloud-watch-metric-data</guid><pubDate>Wed, 24 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;지표 항목&lt;/th&gt;
+&lt;th&gt;속성 값&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;get_metric_data()&lt;/td&gt;
+&lt;td&gt;AWS CloudWatch Metrics API를 사용하여 하나 이상의 메트릭 데이터 포인트 집합을 검색하는 함수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MetricDataQueries&lt;/td&gt;
+&lt;td&gt;CloudWatch 메트릭 데이터를 조회하기 위한 필수 매개변수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Id&lt;/td&gt;
+&lt;td&gt;이 요청을 식별하기 위한 문자열 ID&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MetricStat&lt;/td&gt;
+&lt;td&gt;조회할 메트릭에 대한 정보를 담은 객체&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Metric&lt;/td&gt;
+&lt;td&gt;조회할 메트릭에 대한 정보를 담은 객체&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Namespace&lt;/td&gt;
+&lt;td&gt;조회할 메트릭의 네임스페이스&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MetricName&lt;/td&gt;
+&lt;td&gt;조회할 메트릭의 이름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dimensions&lt;/td&gt;
+&lt;td&gt;조회할 메트릭의 디멘션 정보(옵션)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Period&lt;/td&gt;
+&lt;td&gt;메트릭 데이터의 간격을 초 단위로 지정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stat&lt;/td&gt;
+&lt;td&gt;조회할 메트릭의 통계 종류를 지정(옵션 : Sum, Average, Maximum, Minimum 등)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Unit&lt;/td&gt;
+&lt;td&gt;조회할 메트릭의 단위를 지정(옵션 : igabits/Second, Gigabits, Percent, Terabits, Bits, Kilobits, Megabytes/Second, Kilobytes, Megabits/Second, Terabytes, Bytes, Count, Gigabytes, Milliseconds, Count/Second, Gigabytes/Second, None, Terabytes/Second, Bytes/Second, Megabits, Kilobytes/Second, Megabytes, Microseconds, Kilobits/Second, Terabits/Second, Bits/Second, Seconds)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ReturnData&lt;/td&gt;
+&lt;td&gt;조회 결과를 반환할 지 여부를 지정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;StartTime&lt;/td&gt;
+&lt;td&gt;메트릭 데이터를 가져올 시작 시간 지정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EndTime&lt;/td&gt;
+&lt;td&gt;메트릭 데이터를 가져올 끝 시간 지정&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; boto3
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; datetime &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; datetime&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; timedelta
+
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cloud_watch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    instance_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;namespace&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;AWS/EC2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;dimension&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;InstanceId&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;instance name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;instance id&apos;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;namespace&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;AWS/RDS&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;dimension&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;DBInstanceIdentifier&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;rds name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;rds name&apos;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    REGION_NAME &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ap-northeast-2&apos;&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;# CloudWatch 클라이언트 생성&lt;/span&gt;
+    session &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; boto3&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Session&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        aws_access_key_id&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;ACCESS_KEY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        aws_secret_access_key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;SECRET_KEY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        region_name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;REGION_NAME
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    cloudwatch &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; session&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;client&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;cloudwatch&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    now &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; datetime&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;now&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    start_time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;now &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; timedelta&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hours&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isoformat&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;+09:00&apos;&lt;/span&gt;
+    end_time &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; now&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isoformat&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; instance &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; instance_list&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# 메트릭 데이터 조회&lt;/span&gt;
+        metric_data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cloudwatch&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_metric_data&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            MetricDataQueries&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&apos;Id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;m1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&apos;MetricStat&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                        &lt;span class=&quot;token string&quot;&gt;&apos;Metric&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                            &lt;span class=&quot;token string&quot;&gt;&apos;Namespace&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;namespace&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                            &lt;span class=&quot;token string&quot;&gt;&apos;MetricName&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;CPUUtilization&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                            &lt;span class=&quot;token string&quot;&gt;&apos;Dimensions&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                                &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                                    &lt;span class=&quot;token string&quot;&gt;&apos;Name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;dimension&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                                    &lt;span class=&quot;token string&quot;&gt;&apos;Value&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+                                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+                            &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+                        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;token string&quot;&gt;&apos;Period&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;token string&quot;&gt;&apos;Stat&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Average&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                        &lt;span class=&quot;token string&quot;&gt;&apos;Unit&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Percent&apos;&lt;/span&gt;
+                    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;token string&quot;&gt;&apos;ReturnData&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            StartTime&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;start_time&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            EndTime&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;end_time
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; metric_data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;MetricDataResults&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Values&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;metric_data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;MetricDataResults&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Values&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&apos;instance_id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&apos;instance_name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;name&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&apos;value&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; value
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            result&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; result&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[.pyc 파일 삭제]]></title><description><![CDATA[delete .pyc file]]></description><link>https://pyheejin.github.io//posts/delete-pyc-file</link><guid isPermaLink="false">https://pyheejin.github.io//posts/delete-pyc-file</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;find . | grep -E &amp;quot;(__pycache__|\.pyc|\.pyo$)&amp;quot; | xargs rm -rf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[파이썬 로그 남기기]]></title><description><![CDATA[python logger]]></description><link>https://pyheejin.github.io//posts/python-logger</link><guid isPermaLink="false">https://pyheejin.github.io//posts/python-logger</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; logging&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;handlers
 
 
@@ -33,7 +172,7 @@
         logger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;addHandler&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;handler&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; logger
     &lt;span class=&quot;token keyword&quot;&gt;except&lt;/span&gt; Exception &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&apos;Exception : &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[.pyc 파일 삭제]]></title><description><![CDATA[delete .pyc file]]></description><link>https://pyheejin.github.io//posts/delete-pyc-file</link><guid isPermaLink="false">https://pyheejin.github.io//posts/delete-pyc-file</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;find . | grep -E &amp;quot;(__pycache__|\.pyc|\.pyo$)&amp;quot; | xargs rm -rf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[git add/commit/push 취소]]></title><description><![CDATA[git undo add/commit/push]]></description><link>https://pyheejin.github.io//posts/git-undo</link><guid isPermaLink="false">https://pyheejin.github.io//posts/git-undo</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;add-취소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#add-%EC%B7%A8%EC%86%8C&quot; aria-label=&quot;add 취소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;add 취소&lt;/h2&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&apos;Exception : &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[git add/commit/push 취소]]></title><description><![CDATA[git undo add/commit/push]]></description><link>https://pyheejin.github.io//posts/git-undo</link><guid isPermaLink="false">https://pyheejin.github.io//posts/git-undo</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;add-취소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#add-%EC%B7%A8%EC%86%8C&quot; aria-label=&quot;add 취소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;add 취소&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;파일 상태를 unstage로 변경(file이 없으면 전체 취소)&lt;/li&gt;
 &lt;/ul&gt;
@@ -86,7 +225,29 @@
 &lt;li&gt;-f -d -x: gitignore로 무시되는 파일까지 삭제&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;git [option] clean&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[우분투 시간대 한국으로 변경하기]]></title><description><![CDATA[ubuntu timezone setting]]></description><link>https://pyheejin.github.io//posts/ubuntu-timezone-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/ubuntu-timezone-setting</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;현재-시간대-확인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84%EB%8C%80-%ED%99%95%EC%9D%B8&quot; aria-label=&quot;현재 시간대 확인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;현재 시간대 확인&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;git [option] clean&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[파이썬으로 엑셀 다루기(with, openpyxl)]]></title><description><![CDATA[python to excel with openpyxl]]></description><link>https://pyheejin.github.io//posts/python-to-excel-with-openpyxl</link><guid isPermaLink="false">https://pyheejin.github.io//posts/python-to-excel-with-openpyxl</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;pip install openpyxl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; openpyxl &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Workbook
+
+
+file_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/Users/Administrator/Desktop/output.xlsx&apos;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 엑셀파일 쓰기&lt;/span&gt;
+write_wb &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Workbook&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 이름이 있는 시트를 생성&lt;/span&gt;
+write_ws &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; write_wb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create_sheet&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;생성시트&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Sheet1에다 입력&lt;/span&gt;
+write_ws &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; write_wb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;active
+write_ws&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;숫자&apos;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#행 단위로 추가&lt;/span&gt;
+write_ws&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#셀 단위로 추가&lt;/span&gt;
+write_ws&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cell&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;5행5열&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+write_wb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;save&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;file_path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[우분투 시간대 한국으로 변경하기]]></title><description><![CDATA[ubuntu timezone setting]]></description><link>https://pyheejin.github.io//posts/ubuntu-timezone-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/ubuntu-timezone-setting</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;현재-시간대-확인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84%EB%8C%80-%ED%99%95%EC%9D%B8&quot; aria-label=&quot;현재 시간대 확인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;현재 시간대 확인&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;date&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -167,29 +328,7 @@
           /&gt;
         &lt;/picture&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[파이썬으로 엑셀 다루기(with, openpyxl)]]></title><description><![CDATA[python to excel with openpyxl]]></description><link>https://pyheejin.github.io//posts/python-to-excel-with-openpyxl</link><guid isPermaLink="false">https://pyheejin.github.io//posts/python-to-excel-with-openpyxl</guid><pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;pip install openpyxl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; openpyxl &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Workbook
-
-
-file_path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/Users/Administrator/Desktop/output.xlsx&apos;&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;# 엑셀파일 쓰기&lt;/span&gt;
-write_wb &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Workbook&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;# 이름이 있는 시트를 생성&lt;/span&gt;
-write_ws &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; write_wb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create_sheet&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;생성시트&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;# Sheet1에다 입력&lt;/span&gt;
-write_ws &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; write_wb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;active
-write_ws&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;숫자&apos;&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;#행 단위로 추가&lt;/span&gt;
-write_ws&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;#셀 단위로 추가&lt;/span&gt;
-write_ws&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;cell&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;5행5열&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-write_wb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;save&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;file_path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[파이썬 스케줄러]]></title><description><![CDATA[python scheduler]]></description><link>https://pyheejin.github.io//posts/python-scheduler</link><guid isPermaLink="false">https://pyheejin.github.io//posts/python-scheduler</guid><pubDate>Sat, 20 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[파이썬 스케줄러]]></title><description><![CDATA[python scheduler]]></description><link>https://pyheejin.github.io//posts/python-scheduler</link><guid isPermaLink="false">https://pyheejin.github.io//posts/python-scheduler</guid><pubDate>Sat, 20 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;pip install apscheduler&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;스케줄러-선언&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC-%EC%84%A0%EC%96%B8&quot; aria-label=&quot;스케줄러 선언 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;스케줄러 선언&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; apscheduler&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;schedulers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;background &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; BackgroundScheduler
@@ -245,11 +384,7 @@ schedule&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;start&lt;s
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;id 지정 : &lt;code class=&quot;language-text&quot;&gt;@schedule.scheduled_job(&apos;cron&apos;, second=&apos;*/30&apos;, id=&apos;id&apos;)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[우분투 hostname 변경하기]]></title><description><![CDATA[Change ubuntu hostname]]></description><link>https://pyheejin.github.io//posts/change-ubuntu-hostname</link><guid isPermaLink="false">https://pyheejin.github.io//posts/change-ubuntu-hostname</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo hostnamectl set-hostname [hostname]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;변경 전&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;ubuntu@0-0-0-0:~$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;변경 후&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;ubuntu@hostname:~$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[git 로그인 정보 기억하기]]></title><description><![CDATA[git credential helper]]></description><link>https://pyheejin.github.io//posts/git-credential-helper</link><guid isPermaLink="false">https://pyheejin.github.io//posts/git-credential-helper</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;credential&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#credential&quot; aria-label=&quot;credential permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Credential&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[git 로그인 정보 기억하기]]></title><description><![CDATA[git credential helper]]></description><link>https://pyheejin.github.io//posts/git-credential-helper</link><guid isPermaLink="false">https://pyheejin.github.io//posts/git-credential-helper</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;credential&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#credential&quot; aria-label=&quot;credential permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Credential&lt;/h2&gt;
 &lt;p&gt;반영구적으로 해당 폴더에 저장함&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;git config credential.helper store&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;cache&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cache&quot; aria-label=&quot;cache permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cache&lt;/h2&gt;
@@ -257,81 +392,7 @@ schedule&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;start&lt;s
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;git config credential.helper &amp;#39;cache --timeout=3600&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;global&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#global&quot; aria-label=&quot;global permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Global&lt;/h2&gt;
 &lt;p&gt;폴더 상관없이 모든 프로젝트에 적용&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;git config credential.helper store --global&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Nginx 설정]]></title><description><![CDATA[Nginx Setting]]></description><link>https://pyheejin.github.io//posts/nginx-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/nginx-setting</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo apt-get update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo apt-get install nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&quot;설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%A0%95&quot; aria-label=&quot;설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설정&lt;/h1&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/sites-available/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
-    listen 80;
-    server_name [Public IP주소 or 도메인];
-
-    charset utf-8;
-    client_max_body_size 100M;
-
-    location / {
-        real_ip_header X-Forwarded-For;
-        set_real_ip_from 0.0.0.0/0;
-
-        log_format custom &apos;[$time_local] $remote_addr - [$status] &quot;$request_time&quot; - &quot;$request&quot;&apos;;
-        access_log /home/ubuntu/logs/nginx-access/access.log custom;
-        error_log  /home/ubuntu/logs/nginx-error/error.log;
-
-        include proxy_params;
-        proxy_pass http://unix:/run/gunicorn.sock;
-    }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&quot;nginx-문법-오류-확인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-%EB%AC%B8%EB%B2%95-%EC%98%A4%EB%A5%98-%ED%99%95%EC%9D%B8&quot; aria-label=&quot;nginx 문법 오류 확인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;nginx 문법 오류 확인&lt;/h1&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo nginx -t&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-nginx: configuration file /etc/nginx/nginx.conf test is successful&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&quot;심볼릭-링크-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%AC%EB%B3%BC%EB%A6%AD-%EB%A7%81%ED%81%AC-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;심볼릭 링크 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;심볼릭 링크 설정&lt;/h1&gt;
-&lt;p&gt;에러나면 -f 옵션을 붙여서 실행&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&quot;실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%ED%96%89&quot; aria-label=&quot;실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실행&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;nginx 서비스 재시작&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl restart nginx.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;nginx 서비스 상태 확인&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl status nginx.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user root;
-worker_processes auto;
-pid /var/run/nginx.pid;
-include /etc/nginx/modules-enabled/*.conf;
-
-events {
-    worker_connections 1024;
-}
-
-http {
-    log_format custom &apos;[$time_local] $remote_addr - [$status] &quot;$request_time&quot; - &quot;$request&quot;&apos;;
-    access_log /home/ubuntu/logs/nginx-access/access.log custom;
-    error_log  /home/ubuntu/logs/nginx-error/error.log;
-
-    include /etc/nginx/mime.types;
-    include /etc/nginx/conf.d/*.conf;  // server파일 분리해서 가져옴
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/conf.d/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
-    listen 80;
-    server_name [Public IP주소 or 도메인];
-
-    charset utf-8;
-    client_max_body_size 100M;
-
-    location / {
-        real_ip_header X-Forwarded-For;
-        set_real_ip_from 0.0.0.0/0;
-
-        include proxy_params;
-        proxy_pass http://unix:/run/gunicorn.sock;
-    }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Gunicorn 설정]]></title><description><![CDATA[Gunicorn Setting]]></description><link>https://pyheejin.github.io//posts/gunicorn-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/gunicorn-setting</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;git config credential.helper store --global&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Gunicorn 설정]]></title><description><![CDATA[Gunicorn Setting]]></description><link>https://pyheejin.github.io//posts/gunicorn-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/gunicorn-setting</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;pip install gunicorn&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;run&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#run&quot; aria-label=&quot;run permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Run&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;gunicorn --bind 0:8000 main:app --worker-class uvicorn.workers.UvicornWorker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -421,7 +482,81 @@ formatter=logfileformatter&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;Gunicorn 서비스 상태 확인&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl status gunicorn.service gunicorn.socket&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[이미지 WebP 변환 후 S3에 비동기로 업로드]]></title><link>https://pyheejin.github.io//posts/fastapi-s3-async</link><guid isPermaLink="false">https://pyheejin.github.io//posts/fastapi-s3-async</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl status gunicorn.service gunicorn.socket&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Nginx 설정]]></title><description><![CDATA[Nginx Setting]]></description><link>https://pyheejin.github.io//posts/nginx-setting</link><guid isPermaLink="false">https://pyheejin.github.io//posts/nginx-setting</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo apt-get update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo apt-get install nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%A0%95&quot; aria-label=&quot;설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설정&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/sites-available/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
+    listen 80;
+    server_name [Public IP주소 or 도메인];
+
+    charset utf-8;
+    client_max_body_size 100M;
+
+    location / {
+        real_ip_header X-Forwarded-For;
+        set_real_ip_from 0.0.0.0/0;
+
+        log_format custom &apos;[$time_local] $remote_addr - [$status] &quot;$request_time&quot; - &quot;$request&quot;&apos;;
+        access_log /home/ubuntu/logs/nginx-access/access.log custom;
+        error_log  /home/ubuntu/logs/nginx-error/error.log;
+
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;nginx-문법-오류-확인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-%EB%AC%B8%EB%B2%95-%EC%98%A4%EB%A5%98-%ED%99%95%EC%9D%B8&quot; aria-label=&quot;nginx 문법 오류 확인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;nginx 문법 오류 확인&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo nginx -t&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;심볼릭-링크-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%AC%EB%B3%BC%EB%A6%AD-%EB%A7%81%ED%81%AC-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;심볼릭 링크 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;심볼릭 링크 설정&lt;/h1&gt;
+&lt;p&gt;에러나면 -f 옵션을 붙여서 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%ED%96%89&quot; aria-label=&quot;실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실행&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;nginx 서비스 재시작&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl restart nginx.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;nginx 서비스 상태 확인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo systemctl status nginx.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/nginx.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user root;
+worker_processes auto;
+pid /var/run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    log_format custom &apos;[$time_local] $remote_addr - [$status] &quot;$request_time&quot; - &quot;$request&quot;&apos;;
+    access_log /home/ubuntu/logs/nginx-access/access.log custom;
+    error_log  /home/ubuntu/logs/nginx-error/error.log;
+
+    include /etc/nginx/mime.types;
+    include /etc/nginx/conf.d/*.conf;  // server파일 분리해서 가져옴
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo vi /etc/nginx/conf.d/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
+    listen 80;
+    server_name [Public IP주소 or 도메인];
+
+    charset utf-8;
+    client_max_body_size 100M;
+
+    location / {
+        real_ip_header X-Forwarded-For;
+        set_real_ip_from 0.0.0.0/0;
+
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[이미지 WebP 변환 후 S3에 비동기로 업로드]]></title><link>https://pyheejin.github.io//posts/fastapi-s3-async</link><guid isPermaLink="false">https://pyheejin.github.io//posts/fastapi-s3-async</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;pip install pillow&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;pip install pillow-heif&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;s3-연동&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#s3-%EC%97%B0%EB%8F%99&quot; aria-label=&quot;s3 연동 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;S3 연동&lt;/h1&gt;
@@ -545,4 +680,8 @@ s3 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; s3_connection&lt;
     &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; idx&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; image &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;image_files&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
         file_path&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; image_url &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; image_upload&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;request&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;image&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
                                                   folder&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;folder&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-                                                  filename&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;filename&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+                                                  filename&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;filename&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[우분투 hostname 변경하기]]></title><description><![CDATA[Change ubuntu hostname]]></description><link>https://pyheejin.github.io//posts/change-ubuntu-hostname</link><guid isPermaLink="false">https://pyheejin.github.io//posts/change-ubuntu-hostname</guid><pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;sudo hostnamectl set-hostname [hostname]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;변경 전&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;ubuntu@0-0-0-0:~$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;변경 후&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;commandline&quot;&gt;&lt;pre class=&quot;language-commandline&quot;&gt;&lt;code class=&quot;language-commandline&quot;&gt;ubuntu@hostname:~$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
