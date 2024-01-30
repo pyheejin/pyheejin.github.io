@@ -97,11 +97,18 @@ def cloud_watch():
             EndTime=end_time
         )
         if metric_data['MetricDataResults'][0].get('Values', None) is not None:
-            value = round(metric_data['MetricDataResults'][0]['Values'][0], 2)
+            values = metric_data['MetricDataResults'][0]['Values']
+            if len(values) > 0:
+                value = round(values[0], 2)
+                msg = f"[{instance['namespace']} CPUUtilization] {instance['name']} : {value}%"
+            else:
+                value = 0
+
             data = {
                 'instance_id': instance['id'],
                 'instance_name': instance['name'],
-                'value': value
+                'value': value,
+                'msg': msg
             }
             result.append(data)
     return result
