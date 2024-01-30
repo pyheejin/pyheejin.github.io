@@ -11,7 +11,6 @@ const Author = () => {
   return (
     <div className={styles.author}>
       <p className={styles.bio}>
-        {author.bio}
         <a
           className={styles.twitter}
           href={getContactHref("github", author.contacts.github)}
