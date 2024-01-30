@@ -14,8 +14,6 @@ const Meta: React.FC<Props> = ({ date }: Props) => (
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
-        hour: "numeric",
-        minute: "numeric",
       })}
     </p>
   </div>
