@@ -13,6 +13,12 @@ description: "Gunicorn Setting"
 
 # 설치
 ```commandline
+sudo apt update
+```
+```commandline
+sudo apt install python3-pip
+```
+```commandline
 pip install gunicorn
 ```
 

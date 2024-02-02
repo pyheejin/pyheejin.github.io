@@ -16,7 +16,7 @@ description: "Nginx Setting"
 sudo apt-get update
 ```
 ```commandline
-sudo apt-get install nginx
+sudo apt install nginx
 ```
 
 # 설정
@@ -163,7 +163,7 @@ http {
 ```
 
 ```commandline
-sudo vi /etc/nginx/conf.d/server.conf
+sudo vi /etc/nginx/sites-available/nginx.conf
 ```
 ```
 server {
@@ -181,4 +181,9 @@ server {
         proxy_pass http://unix:/run/gunicorn.sock;
     }
 }
+```
+### 심볼릭 링크 설정
+에러나면 -f 옵션을 붙여서 실행
+```commandline
+sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/nginx.conf
 ```

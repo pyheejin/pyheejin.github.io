@@ -21,6 +21,10 @@
       "path": "/category/fastapi"
     },
     {
+      "label": "Django",
+      "path": "/category/django"
+    },
+    {
       "label": "Deploy",
       "path": "/category/deploy"
     },
