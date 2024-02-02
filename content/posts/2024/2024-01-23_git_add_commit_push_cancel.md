@@ -15,7 +15,7 @@ description: "git undo add/commit/push"
 ## add 취소
 - 파일 상태를 unstage로 변경(file이 없으면 전체 취소)
 ```commandline
-git reset HEAD [file]
+git reset [option] HEAD [file]
 ```
 
 ## commit 취소
@@ -31,34 +31,25 @@ git log -g
 
 - 직전 commit 취소
 ```commandline
-git reset [option] HEAD^
+git reset --hard HEAD^
 ```
 
 - 마지막 2개의 commit 취소
 ```commandline
-git reset [option] HEAD~2
+git reset --hard HEAD~2
 ```
 
 ## push 취소
-1. commit 취소
+1. 워킹 디렉토리 되돌리기
 ```commandline
-git reset [option] HEAD^
+// 직전 commit 취소
+git reset --hard HEAD^
+```
+```commandline
+git reset --hard [commit id]
 ```
 
-2. 원하는 시점으로 워킹 디렉터리 되돌리기
-```commandline
-git log -g
-```
-```commandline
-git reset [commit id]
-```
-
-3. commit
-```commandline
-git commit -m "commit message"
-```
-
-4. 강제 push
+3. 강제 push
 ```commandline
 git push origin +[branch name]
 ```
@@ -69,5 +60,5 @@ git push origin +[branch name]
 >   - -f -d: 폴더+파일 삭제
 >   - -f -d -x: gitignore로 무시되는 파일까지 삭제
 ```commandline
-git [option] clean
+git clean [option]
 ```
