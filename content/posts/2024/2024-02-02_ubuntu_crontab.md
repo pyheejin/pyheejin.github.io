@@ -25,7 +25,6 @@ description: "ubuntu delete log"
 >>   - -ctime : 생성된 날짜/시간 기록
 >>   - -atime : 조회됐거나 실행됐을 때의 기록
 >>   - -type f : 파일
->>   - -atime : 조회됐거나 실행됐을 때의 기록
 >> - \+ : 생성되거나 수정된 날짜 기준
 >> - \- : 현재 날짜 기준
 
