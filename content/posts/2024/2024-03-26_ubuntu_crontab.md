@@ -8,7 +8,7 @@ category: "Ubuntu"
 tags:
   - "ubuntu"
   - "crontab"
-  - "delete-log"
+  - "deletelog"
 description: "ubuntu delete log"
 ---
 
