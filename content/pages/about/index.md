@@ -39,11 +39,11 @@ Python, FastAPI, Flask, Django, MySQL, SQLAlchemy, Flutter
 
 > 자유롭게 춤을 배우고, 가르치고 싶어하는 사람들을 위한 플랫폼
 
-![home](./dance_mate_1.png)
-![calendar](./dance_mate_2.png)
-![chat](./dance_mate_3.png)
-![lesson](./dance_mate_4.png)
-![ticket](./dance_mate_5.png)
+<img src="./dance_mate_1.png" width="200" height="500"/>
+<img src="./dance_mate_2.png" width="200" height="500"/>
+<img src="./dance_mate_3.png" width="180" height="500"/>
+<img src="./dance_mate_4.png" width="180" height="500"/>
+<img src="./dance_mate_5.png" width="180" height="500"/>
 
 - 주요기능
   - 수업 등록 및 관리
