@@ -17,6 +17,10 @@
       "path": "/"
     },
     {
+      "label": "Flutter",
+      "path": "/category/flutter"
+    },
+    {
       "label": "Python",
       "path": "/category/python"
     },
