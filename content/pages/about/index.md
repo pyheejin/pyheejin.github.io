@@ -26,18 +26,6 @@ Python, FastAPI, Flask, Django, MySQL, SQLAlchemy, Flutter
 <hr>
 
 ## 프로젝트
-### 뷰카 앱 (2023.03 ~ 2024.04)
-
->미용실 매출 및 예약, 매장 관리 서비스
-
-- 개발환경
-  - Tools : Git, GitHub
-  - Back-end : Python, FastAPI
-
-- 역할
-  - 프로젝트 구축
-  - 매출관리, 예약관리(네이버 예약 연동) api 개발
-
 ### 댄스메이트 (2024.12 ~ 진행중)
 
 > 자유롭게 춤을 배우고, 가르치고 싶어하는 사람들을 위한 플랫폼
@@ -56,6 +44,24 @@ Python, FastAPI, Flask, Django, MySQL, SQLAlchemy, Flutter
   - Front-end : Flutter
   - Back-end : Python, FastAPI
 
+### 일리 (2024.10.24 ~ 2024.11.25)
+eilly, 영양제 추천 사이트 '필리' 클론코딩
+
+> 맞춤 영양제 추천
+
+<img src="./eilly_1.png" width="400" height="400"/>
+<img src="./eilly_2.png" width="500" height="400"/>
+
+- 주요기능
+  - 설문조사 결과로 영양제 추천
+  - 영양제 장바구니 담기 및 구매
+  - 영양제 구매내역
+  - 진행했던 설문조사 결과 내역
+
+- 개발환경
+  - Tools : Git, GitHub
+  - Front-end : Flutter
+
 <hr>
 
 ## 경력
@@ -66,6 +72,7 @@ Python, FastAPI, Flask, Django, MySQL, SQLAlchemy, Flutter
 
 **주식회사 한국미용데이터** <br>
 *2023.03 - 2024.04 (1년 2개월)* <br>
+미용실 매출 및 예약, 매장 관리 서비스 <br>
 뷰카 앱 서버 구축 및 API 개발
 
 **데블록(Devlock)** <br>
