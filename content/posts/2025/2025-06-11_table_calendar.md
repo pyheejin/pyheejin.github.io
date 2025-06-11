@@ -94,10 +94,18 @@ TableCalendar(
     })
   },
   calendarBuilders: CalendarBuilders(
+    // 요일 스타일
     dowBuilder: (context, day) {
       return Center(
         child: Text(days[day.weekday]),
       );
+    },
+    // 날짜 스타일
+    markerBuilder: (context, day, events) {
+      if (events.isNotEmpty) {
+        return const Text('${events.length}개');
+      }
+      return null;
     },
   ),
   // 이벤트 마커 표시
