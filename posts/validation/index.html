@@ -1,0 +1,732 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.25.9"/><meta name="description" content="" data-gatsby-head="true"/><meta name="twitter:card" content="summary_large_image" data-gatsby-head="true"/><meta name="twitter:title" content="이메일, 비밀번호 유효성 검사 - JJiNi&#x27;s blog" data-gatsby-head="true"/><meta name="twitter:description" content="" data-gatsby-head="true"/><meta name="og:title" content="이메일, 비밀번호 유효성 검사 - JJiNi&#x27;s blog" data-gatsby-head="true"/><meta name="og:type" content="website" data-gatsby-head="true"/><meta name="og:description" content="" data-gatsby-head="true"/><meta name="theme-color" content="hsl(31, 92%, 62%)"/><style data-href="/styles.8369b489e007908a5c7b.css" data-identity="gatsby-global-css">:after,:before,:root{--color-white:#fff;--color-primary:#5c92ff;--color-secondary:#f7a145;--color-prism-background:#fffaf0;--color-typographic-base-font:#242933;--color-typographic-link-p-font:#5c92ff;--color-typographic-link-s-font:#f7a145;--color-page-border:#fffaf0;--color-page-background:#fff;--color-sidebar-border:#fffaf0;--color-sidebar-border-fade:#fff;--color-contacts-border:#fffaf0;--color-button-border:#fef0e3;--color-button-color:#242933;--color-theme-switcher:#3f485a;--color-theme-switcher-hover:#5c92ff}.dark :after,.dark :before,:root.dark{--color-white:#fff;--color-primary:#5c92ff;--color-secondary:#f7a145;--color-prism-background:#fefcff;--color-typographic-base-font:#fff;--color-typographic-link-p-font:#5c92ff;--color-typographic-link-s-font:#f7a145;--color-page-border:#3f485a;--color-page-background:#242933;--color-sidebar-border:#3f485a;--color-sidebar-border-fade:#242933;--color-contacts-border:#3f485a;--color-button-border:#3f485a;--color-button-color:#fff;--color-theme-switcher:#fffaf0;--color-theme-switcher-hover:#5c92ff}html{font-size:100}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background:var(--color-page-background);color:var(--color-typographic-base-font);font-size:16px;line-height:1.625;margin:0 0 0 calc(100vw - 100%);text-rendering:optimizelegibility}body,h1,h2,h3,h4,h5,h6{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif}h1,h2,h3,h4,h5,h6{font-weight:600}h1{font-size:40px;line-height:52px;margin-bottom:26px;margin-top:104px}h2{font-size:27px;line-height:39px}h2,h3{margin-bottom:13px;margin-top:52px}h3{font-size:22px;line-height:26px}h4{font-size:19.2px;margin-top:39px}h4,h5{line-height:26px;margin-bottom:13px}h5,h6{font-size:16px;margin-top:65px}h6{line-height:26px;margin-bottom:13px}img{max-width:100%}hr,img{border:0;display:block}hr{background-image:linear-gradient(180deg,transparent 1px,transparent 11px,#242933 0,#242933 15px,transparent 0,transparent 26px);background-size:100% 26px;color:var(--color-typographic-base-font);height:26px;margin:52px auto;width:100px}a{color:var(--color-typographic-link-p-font);text-decoration:none}a:active,a:focus,a:hover{color:var(--color-typographic-link-s-font)}b,strong{font-weight:600}ul{list-style:square;margin-bottom:26px}ul li{margin-bottom:10px;padding:0 5px}p{line-height:26px;margin-bottom:26px}blockquote{font-style:italic;padding:0}figure{display:block;height:auto;width:100%}figcaption{color:var(--color-typographic-base-font);font-size:14px;font-style:italic;line-height:19.5px;margin-bottom:0;margin-top:6.5px;text-align:center}@media screen and (min-width:685px){figure.float-left,figure.float-right{max-width:310px;padding:0 26px}.float-right{float:right}.float-left{float:left}}code[class*=language-],pre[class*=language-]{word-wrap:normal;color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:var(--color-prism-background)}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#073642}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{background:#eee8d5;color:#657b83;cursor:help}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.Feed-module--feed--a6204 .Feed-module--item--c7a63{margin-bottom:32.5px}.Feed-module--feed--a6204 .Feed-module--item--c7a63:last-child{margin-bottom:13px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f{font-size:27px;line-height:39px;margin-bottom:13px;margin-top:0}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f .Feed-module--link--6123b{color:var(--color-typographic-base-font)}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f .Feed-module--link--6123b:focus,.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--title--f252f .Feed-module--link--6123b:hover{border-bottom:1px solid #242933;color:var(--color-typographic-base-font)}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--description--57348{font-size:16px;line-height:26px;margin-bottom:19.5px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--time--72864{color:var(--color-typographic-base-font);font-size:14px;font-weight:600;text-transform:uppercase}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--divider--81a18{margin:0 13px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--category--59f58 .Feed-module--link--6123b{color:var(--color-secondary);font-size:14px;font-weight:600;text-transform:uppercase}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--category--59f58 .Feed-module--link--6123b:focus,.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--meta--250c2 .Feed-module--category--59f58 .Feed-module--link--6123b:hover{color:#5c92ff}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--more--51a4e{color:var(--color-primary);font-size:16px}.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--more--51a4e:focus,.Feed-module--feed--a6204 .Feed-module--item--c7a63 .Feed-module--more--51a4e:hover{border-bottom:1px solid #5c92ff;color:var(--color-primary)}.Layout-module--layout--2c933{margin-left:auto;margin-right:auto;max-width:1070px}.Layout-module--layout--2c933:before{content:"";display:table}.Layout-module--layout--2c933:after{clear:both;content:"";display:table}.Page-module--page--24e03{margin-bottom:52px}.Page-module--page--24e03 .Page-module--inner--4b31d{padding:26px 19.5px 0}.Page-module--page--24e03 .Page-module--title--90338{font-size:40px;font-weight:600;line-height:52px;margin-bottom:37.7px;margin-top:0}.Page-module--page--24e03 .Page-module--body--561c4{font-size:16px;line-height:26px;margin:0 0 26px}@media screen and (min-width:685px){.Page-module--page--24e03{width:calc(58.275% - 12.5px)}.Page-module--page--24e03:nth-child(1n){clear:none;float:left;margin-right:30px}.Page-module--page--24e03:last-child{margin-right:0}.Page-module--page--24e03:nth-child(12n){float:right;margin-right:0}.Page-module--page--24e03:nth-child(12n+1){clear:both}.Page-module--page--24e03 .Page-module--inner--4b31d{padding:32.5px 19.5px 0}}@media screen and (min-width:960px){.Page-module--page--24e03{width:calc(66.6% - 10px)}.Page-module--page--24e03:nth-child(1n){clear:none;float:left;margin-right:30px}.Page-module--page--24e03:last-child{margin-right:0}.Page-module--page--24e03:nth-child(3n){float:right;margin-right:0}.Page-module--page--24e03:nth-child(3n+1){clear:both}.Page-module--page--24e03 .Page-module--inner--4b31d{padding:39px 26px 0}}.Pagination-module--pagination--d61cb{display:flex;margin-top:52px}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b{text-align:left;width:50%}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d{color:var(--color-secondary);font-size:26px;font-weight:700}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d:focus,.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d:hover{color:var(--color-primary)}.Pagination-module--pagination--d61cb .Pagination-module--previous--4a76b .Pagination-module--previousLink--5590d.Pagination-module--disable--7e105{color:#3f485a;pointer-events:none}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8{text-align:right;width:50%}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff{color:var(--color-secondary);font-size:26px;font-weight:700}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff:focus,.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff:hover{color:var(--color-primary)}.Pagination-module--pagination--d61cb .Pagination-module--next--1cab8 .Pagination-module--nextLink--532ff.Pagination-module--disable--7e105{color:#3f485a;pointer-events:none}.ThemeSwitcher-module--themeSwitcher--8a77f{--color:var(--color-theme-switcher)}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--button--7cb7b{align-items:center;background:transparent;border:0;cursor:pointer;display:flex;justify-content:center;outline:0}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--button--7cb7b svg{stroke:var(--color);pointer-events:none;transition:stroke .4s}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--button--7cb7b:hover{--color:var(--color-theme-switcher-hover)}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--moon--10537{stroke-dasharray:0 1px;opacity:0;transition:stroke-dasharray .2s ease-in,opacity .4s ease-in}.ThemeSwitcher-module--themeSwitcher--8a77f .ThemeSwitcher-module--sun--2163a{stroke-dasharray:1px 1px;opacity:1;transition:stroke-dasharray .2s ease-in,opacity .4s ease-in}.ThemeSwitcher-module--themeSwitcher--8a77f.ThemeSwitcher-module--dark--6db0c .ThemeSwitcher-module--moon--10537{stroke-dasharray:1px 1px;opacity:1}.ThemeSwitcher-module--themeSwitcher--8a77f.ThemeSwitcher-module--dark--6db0c .ThemeSwitcher-module--sun--2163a{stroke-dasharray:0 1px;opacity:0}.Author-module--author--cbd31 .Author-module--photo--9787b{background-clip:padding-box;border-radius:50%;display:inline-block;height:75px;margin-bottom:0;width:75px}.Author-module--author--cbd31 .Author-module--photo--9787b img{border-radius:50%}.Author-module--author--cbd31 .Author-module--title--cf7e5{font-size:18px;font-weight:600;line-height:29.25px;margin:0}.Author-module--author--cbd31 .Author-module--title--cf7e5 .Author-module--link--09c17,.Author-module--author--cbd31 .Author-module--title--cf7e5 .Author-module--link--09c17:focus,.Author-module--author--cbd31 .Author-module--title--cf7e5 .Author-module--link--09c17:hover{color:var(--color-typographic-base-font)}.Author-module--author--cbd31 .Author-module--subtitle--86ec5{color:#7f8ba4;line-height:26px;margin-bottom:26px}.Author-module--author--cbd31 .Author-module--titleContainer--4f576{align-items:center;display:flex;justify-content:space-between;margin:13px 0}.Icon-module--icon--1d7da{fill:currentcolor;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;speak:none;stroke:currentcolor;stroke-width:0;display:inline-block;font-style:normal;font-variant:normal;font-weight:400;height:1em;line-height:1em;text-align:center;text-transform:none;width:1em}.Contacts-module--contacts--09178{margin-bottom:26px}.Contacts-module--contacts--09178 .Contacts-module--list--9670b{display:flex;flex-flow:row wrap;flex-grow:0;flex-shrink:0;list-style:none;margin:13px 0;max-width:165px;padding:0}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0{align-content:center;align-items:center;border:1px solid var(--color-contacts-border);border-radius:50%;display:flex;height:40px;justify-content:center;line-height:40px;margin:6.5px;padding:0;text-align:center;width:40px}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0:nth-child(3n+1){margin-left:0}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0 .Contacts-module--link--de1e0{border:0;color:var(--color-typographic-base-font);cursor:pointer;display:flex}.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0 .Contacts-module--link--de1e0:focus,.Contacts-module--contacts--09178 .Contacts-module--list--9670b .Contacts-module--item--f9cb0 .Contacts-module--link--de1e0:hover{color:var(--color-typographic-link-p-font)}.Copyright-module--copyright--2c602{color:#7f8ba4;font-size:14px}.Menu-module--menu--113a9{margin-bottom:26px}.Menu-module--menu--113a9 .Menu-module--list--e1ae3{list-style:none;margin:0;padding:0}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679{margin:13px 0;padding:0}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02{border:0;color:var(--color-typographic-base-font);font-size:16px;font-weight:400}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02:focus,.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02:hover{border-bottom:1px solid #5c92ff;color:#5c92ff}.Menu-module--menu--113a9 .Menu-module--list--e1ae3 .Menu-module--item--8b679 .Menu-module--link--a6f02.Menu-module--active--6cb74{border-bottom:1px solid var(--color-typographic-base-font);color:var(--color-typographic-base-font)}.Button-module--button--b1113{border:1px solid var(--color-button-border);border-radius:20px;color:var(--color-button-color);display:inline-block;font-size:16px;font-weight:400;height:40px;line-height:40px;margin-left:auto;margin-right:auto;padding:0 26px;text-align:center;text-decoration:none}.Button-module--button--b1113:focus,.Button-module--button--b1113:hover{color:#5c92ff}.Author-module--author--1c58d{border-top:1px solid var(--color-page-border);line-height:26px;margin-bottom:52px;margin-top:26px;max-width:900px;padding-top:26px}.Author-module--author--1c58d .Author-module--bio--08950 .Author-module--twitter--90647{display:block;text-decoration:underline}.Author-module--author--1c58d .Author-module--bio--08950 .Author-module--twitter--90647:focus,.Author-module--author--1c58d .Author-module--bio--08950 .Author-module--twitter--90647:hover{color:var(--color-typographic-link-s-font)}@media screen and (min-width:685px){.Author-module--author--1c58d{margin-left:auto;margin-right:auto}}.Content-module--content--80d58{margin:0 auto;max-width:945px;padding:0 13px}.Content-module--content--80d58 .Content-module--title--09504{font-size:32px;font-weight:600;line-height:42.9px;margin:26px auto 0;max-width:900px;text-align:center}.Content-module--content--80d58 .Content-module--body--726c2 figure{margin-bottom:26px}.Content-module--content--80d58 .Content-module--body--726c2 figure blockquote{font-style:italic;margin-top:0;padding:26px 0;text-align:center}.Content-module--content--80d58 .Content-module--body--726c2 figure blockquote p{font-size:26.9072px;line-height:39px;margin-bottom:26px;margin-top:0;max-width:900px}.Content-module--content--80d58 .Content-module--body--726c2 a{text-decoration:underline}.Content-module--content--80d58 .Content-module--body--726c2 *{margin-left:auto;margin-right:auto;max-width:900px}.Content-module--content--80d58 .Content-module--body--726c2 h2>a{visibility:hidden}.Content-module--content--80d58 .Content-module--body--726c2 h2>a>svg{fill:var(--color-typographic-base-font)}.Content-module--content--80d58 .Content-module--body--726c2 img{max-width:100%}@media screen and (min-width:960px){.Content-module--content--80d58{padding:0}.Content-module--content--80d58 .Content-module--title--09504{font-size:48px;line-height:58.5px;margin-bottom:39px;margin-top:58.5px}.Content-module--content--80d58 .Content-module--body--726c2,.Content-module--content--80d58 .Content-module--body--726c2 p{font-size:18px;line-height:29.25px;margin-bottom:29.25px}.Content-module--content--80d58 .Content-module--body--726c2 h2>a{padding-right:13px;visibility:unset}}.Meta-module--meta--dae0a .Meta-module--date--4d30d{font-style:italic}.Tags-module--tags--18589{margin-bottom:13px}.Tags-module--tags--18589 .Tags-module--list--82ae6{list-style:none;padding:0}.Tags-module--tags--18589 .Tags-module--list--82ae6 .Tags-module--item--52015{display:inline-block;margin:6.5px 0}@media screen and (min-width:685px){.Tags-module--tags--18589 .Tags-module--list--82ae6 .Tags-module--item--52015:first-child{margin-left:0;padding-left:0}}.Sidebar-module--sidebar--1bfa1{width:100%}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0{padding:26px 19.5px 0;position:relative}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0:after{background:var(--color-sidebar-border);background:linear-gradient(to bottom,var(--color-sidebar-border) 0,var(--color-sidebar-border) 48%,var(--color-sidebar-border-fade) 100%)}@media screen and (min-width:685px){.Sidebar-module--sidebar--1bfa1{width:calc(41.625% - 17.5px)}.Sidebar-module--sidebar--1bfa1:nth-child(1n){clear:none;float:left;margin-right:30px}.Sidebar-module--sidebar--1bfa1:last-child{margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(12n){float:right;margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(12n+1){clear:both}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0{padding:32.5px 19.5px 0}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0:after{bottom:0;content:"";height:540px;position:absolute;right:-10px;top:30px;width:1px}}@media screen and (min-width:960px){.Sidebar-module--sidebar--1bfa1{width:calc(33.3% - 20px)}.Sidebar-module--sidebar--1bfa1:nth-child(1n){clear:none;float:left;margin-right:30px}.Sidebar-module--sidebar--1bfa1:last-child{margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(3n){float:right;margin-right:0}.Sidebar-module--sidebar--1bfa1:nth-child(3n+1){clear:both}.Sidebar-module--sidebar--1bfa1 .Sidebar-module--inner--344d0{padding:39px}}.Post-module--post--3a994 .Post-module--content--3c6e5{margin:0 auto}.Post-module--post--3a994 .Post-module--comments--d3b99,.Post-module--post--3a994 .Post-module--footer--f8705{margin:0 auto;max-width:900px;padding:0 13px}.Post-module--post--3a994 .Post-module--buttons--2972d{align-items:center;display:flex;justify-content:center;margin:26px 0 0;text-align:center}.Post-module--post--3a994 .Post-module--buttons--2972d .Post-module--buttonArticles--d793a{margin:0 13px 0 0}@media screen and (min-width:960px){.Post-module--post--3a994 .Post-module--comments--d3b99,.Post-module--post--3a994 .Post-module--footer--f8705{padding:0}.Post-module--post--3a994 .Post-module--buttons--2972d{left:30px;margin:0 13px 0 0;max-width:none;position:fixed;top:30px}}</style><title data-gatsby-head="true">이메일, 비밀번호 유효성 검사 - JJiNi&#x27;s blog</title><link rel="alternate" type="application/rss+xml" title="JJiNi&#x27;s blog" href="/rss.xml"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-73379983-2"></script><script>
+      
+      
+      if(true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer && window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-73379983-2', {"send_page_view":false});
+      }
+      </script><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/><link rel="icon" href="/favicon-32x32.png?v=6e78319c8abb183035efdb3a8ce6e2c5" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=6e78319c8abb183035efdb3a8ce6e2c5"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><script>
+          void function() {
+            var cachedMode;
+
+            try {
+              var preferredTheme = JSON.parse(localStorage.getItem('diesel:theme-atom'));
+
+              if (preferredTheme && preferredTheme.mode) {
+                cachedMode = preferredTheme.mode;
+              }
+            } catch (err) { }
+
+            function setTheme(newTheme) {
+              document.documentElement.className = newTheme;
+            }
+
+            var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+            setTheme(cachedMode || (darkQuery.matches ? 'dark' : 'light'));
+          }()
+        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Layout-module--layout--2c933"><div class="Post-module--post--3a994"><div class="Post-module--buttons--2972d"><a class="Button-module--button--b1113 Post-module--buttonArticles--d793a" href="/">All Articles</a></div><div class="Post-module--content--3c6e5"><div class="Content-module--content--80d58"><h1 class="Content-module--title--09504">이메일, 비밀번호 유효성 검사</h1><div class="Content-module--body--726c2"><p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0a0a7c1f7ff773d8916c972be64d13cd/302a4/Screenshot_1760368729.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 224.58333333333337%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAtCAYAAACu/EtoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFFElEQVRIx5WX3a8TRRjGe++NcK8X6rXEv0JDYvwHjDHh2hvjtSZAEJGEW0AFwodoNIaYKAQiRKOJGjnAaTwcyjk9pd/b7W677W73e35mZj+62/acg02e7nRn5pl53nfmfd9WXn7pZW7+eAvbcAjtCOFCPBM58EHvDJnoU9WW74pjAhf+unydD99+hxcOHKDyy627yM/24zpmz4RgPlhOJIJXX3mNI+8fUeMCOywt1q532NzYpnb7Hh+8dZiKY84IpqHaXeTESzsghO++/p7f7/4BgqUxklS+kwvf/uISlanpYFseU3OWy84m5JPSj5xYfF9cWKkJoeJMfNYfbTIcWFj6BH8SlAbLZ6Zg0b6Lv+NZTEXvGlimg94zMXsjNbk8mD0h3DJ5RZL0n/WVJ6U9y5Ln0ndDQjpHRUp0xx6eFeRkoQOhfCqwKzLCImlFEkQlO0jjQ+ymct0Ei5PDQrtEWDR+1o6cslOKk/YlLHtNpISJ/UIbrD5MNGga0BuD+H+EFAjJ5UfO3G6Z/D0lL0pSNpwte1AUjstzEWYd2a72xF5eXnUDnucMioIJ9iRMVt3/lsQFM6w8NngsHZfVt2M5MGRPtUNJpHcMqvf/ZaxZpUC6H+niArlkx3SwBhMVHJZNsIxsTDEKiYwwibxdZpavAmUspfspvBTF3Unz+DA1HLY2tpXCbKFkhx4EmoXbGuC1dbyOgdfScZsaXmeI3x8T6BOCQQH6BE8bM23pRJa/INkDt6XjPG0qzOodnK0WTu0Zs50uwdBOJqThP5ct1S3asJgbZAiXSSqX6S/LXZS+q5e1ls7m+hN2NhsrHbPX72J77uXBhFF/zHQ4TZLRPl7OJC8dm2zirK1DTIJgBcKCSfwkX9sjl6eP6/Ncnl89D7yugftMw5Vebg8TL7cGuedVX3OgvO51TfyeqTYx3u4QjtwFL/sor47XNphu1HHqPexak+njBpP1mnrKPtl2tjsEpktgzAhNl2jkEk2CFV6OUJWBkixSsNCGuVmKCFZ4edQWdGuC3pag93QO+a6zmaBXK/dl/bYu8ttSkQlJrnL3W8GFY4Jrnwuufia4ekpw5aTgmzOCG+cFN84Jrp0WXFF9qH459uJxWP8t2akMvBX5RSy4cx3OfQKXPoWLJxJcOA7Xz8APZ+HGebh8Ui6KIpG4dALOfwwP7xUIs1syqAXU//Zo3E+xFtBY89m5H7D9T0j9oaCxDo2qoFElR/0RjLukIY/0HHqAbkCjAa0WNJugadDtQq8H1jh1mEhRcIjInLIQsdVd9gsH2S88fdKInpzZxYRVzH65l4cdA6NrMmjpqi2vYfZOb+uYnQijBWZbENmrC6XSsRkPLFXOyVSgt4eY/ZF6Soz6I3U0JqqKKBcCS4QlycV7GyzI90WKck0oni+NFv4FeMxRKEIVqbtL1ptXonFe2maDZJlsyOpWGzE17PnibrnAWsp6mT1UeMpLDKGy4cSwsc0ZszSqJOlApHEzqSVLhPmOrJ+xm+8RWzfTUiNOYp8fQRjn6UCZIk7/GRTUKMnBNFB1oNxS68GbfPTui3SrhyFy1fEgjtha/5V6Q1MkoZ0wVatVjh47qtoyN0tH1jd3qKz9+SD9DwJu/xTtB28QGafTVeXqMZptYtguuEl1K82iD4asra0pIlmny8+XZ7+icuj1Q9SqtdR2cnA3t5PW0th50qC91aa91aS+2WCkjZW31VGSG5E7DuH2T3c4ePAg/wFRgX5+yQhbmQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/0a0a7c1f7ff773d8916c972be64d13cd/8ac56/Screenshot_1760368729.webp 240w,
+/static/0a0a7c1f7ff773d8916c972be64d13cd/d3be9/Screenshot_1760368729.webp 480w,
+/static/0a0a7c1f7ff773d8916c972be64d13cd/e46b2/Screenshot_1760368729.webp 960w,
+/static/0a0a7c1f7ff773d8916c972be64d13cd/260c2/Screenshot_1760368729.webp 1080w"
+              sizes="(max-width: 960px) 100vw, 960px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/0a0a7c1f7ff773d8916c972be64d13cd/8ff5a/Screenshot_1760368729.png 240w,
+/static/0a0a7c1f7ff773d8916c972be64d13cd/e85cb/Screenshot_1760368729.png 480w,
+/static/0a0a7c1f7ff773d8916c972be64d13cd/d9199/Screenshot_1760368729.png 960w,
+/static/0a0a7c1f7ff773d8916c972be64d13cd/302a4/Screenshot_1760368729.png 1080w"
+            sizes="(max-width: 960px) 100vw, 960px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/0a0a7c1f7ff773d8916c972be64d13cd/d9199/Screenshot_1760368729.png"
+            alt="login_screen"
+            title="login_screen"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h2 id="validationdart" style="position:relative;"><a href="#validationdart" aria-label="validationdart permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>validation.dart</h2>
+<div class="gatsby-highlight" data-language="dart"><pre class="language-dart"><code class="language-dart"><span class="token comment">// 이메일 정규식</span>
+bool <span class="token function">isEmailValid</span><span class="token punctuation">(</span><span class="token class-name">String</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">RegExp</span> regExp <span class="token operator">=</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>
+    <span class="token string-literal"><span class="token string">r'^[a-zA-Z0-9.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> regExp<span class="token punctuation">.</span><span class="token function">hasMatch</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 비밀번호 정규식</span>
+bool <span class="token function">isPasswordValid</span><span class="token punctuation">(</span><span class="token class-name">String</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 특수문자, 문자, 숫자 포함해서 8자 이상 15자 이내</span>
+  <span class="token class-name">RegExp</span> regExp <span class="token operator">=</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>
+    <span class="token string-literal"><span class="token string">r'^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&amp;\\(\\)\-_=+]).{8,15}$'</span></span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> regExp<span class="token punctuation">.</span><span class="token function">hasMatch</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="dart"><pre class="language-dart"><code class="language-dart"><span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'dart:convert'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/database/model.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/widgets/validation.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/google_sign_in_service.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/provider/main_tap_provider.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/provider/user_provider.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/screens/search_user_screen.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/screens/signup_screen.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/widgets/error.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:flutter_dotenv/flutter_dotenv.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:flutter_riverpod/flutter_riverpod.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:dancemate_app/screens/main_tab_screen.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:flutter/material.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:flutter_secure_storage/flutter_secure_storage.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:kakao_flutter_sdk/kakao_flutter_sdk_talk.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:kakao_flutter_sdk/kakao_flutter_sdk_template.dart'</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string-literal"><span class="token string">'package:sign_in_with_apple/sign_in_with_apple.dart'</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">LoginScreen</span> <span class="token keyword">extends</span> <span class="token class-name">ConsumerStatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token class-name">LoginScreen</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span>key<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">ConsumerState</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LoginScreen</span><span class="token punctuation">></span></span> <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">_LoginScreenState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> _LoginScreenState <span class="token keyword">extends</span> <span class="token class-name">ConsumerState</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LoginScreen</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+  <span class="token keyword">final</span> <span class="token class-name">TextEditingController</span> emailController <span class="token operator">=</span> <span class="token class-name">TextEditingController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">final</span> <span class="token class-name">TextEditingController</span> passwordController <span class="token operator">=</span> <span class="token class-name">TextEditingController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 이메일 유효성 상태 변수</span>
+  bool isValidEmail <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token comment">// 이메일 필드 입력 여부 추적 변수</span>
+  bool isEmailFieldTouched <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 비밀번호 유효성 상태 변수</span>
+  bool isValidPassword <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token comment">// 비밀번호 필드 입력 여부 추적 변수</span>
+  bool isPasswordFieldTouched <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    emailController<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span>_validateEmail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    passwordController<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span>_validatePassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">_validateEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    isEmailFieldTouched <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> bool currentValidation <span class="token operator">=</span> <span class="token function">isEmailValid</span><span class="token punctuation">(</span>emailController<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      isValidEmail <span class="token operator">=</span> currentValidation<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">_validatePassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    isPasswordFieldTouched <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> bool currentValidation <span class="token operator">=</span> <span class="token function">isPasswordValid</span><span class="token punctuation">(</span>passwordController<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      isValidPassword <span class="token operator">=</span> currentValidation<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token keyword">void</span> <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    emailController<span class="token punctuation">.</span><span class="token function">removeListener</span><span class="token punctuation">(</span>_validateEmail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    passwordController<span class="token punctuation">.</span><span class="token function">removeListener</span><span class="token punctuation">(</span>_validatePassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    emailController<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    passwordController<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">onClearTap</span><span class="token punctuation">(</span><span class="token class-name">TextEditingController</span> controller<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    controller<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">onLoginTap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 로그인 버튼 클릭 시 이메일, 비밀번호 유효성 검사 실행</span>
+    <span class="token function">_validateEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">_validatePassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isValidEmail <span class="token operator">||</span> <span class="token operator">!</span>isValidPassword<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">errorAlert</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">'이메일 혹은 비밀번호를 확인해주세요.'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">dynamic</span><span class="token punctuation">></span></span> args <span class="token operator">=</span> <span class="token punctuation">[</span>
+      emailController<span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+      passwordController<span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> result <span class="token operator">=</span> <span class="token keyword">await</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span><span class="token function">postUserLoginProvider</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">.</span>future<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_code'</span></span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> storage <span class="token operator">=</span> <span class="token class-name">FlutterSecureStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">await</span> storage<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>key<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'login'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">final</span> userId <span class="token operator">=</span> result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'user_id'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> userType <span class="token operator">=</span> result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'type'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> accessToken <span class="token operator">=</span> result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'access_token'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">final</span> payload <span class="token operator">=</span> <span class="token function">jsonEncode</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token string-literal"><span class="token string">'userId'</span></span><span class="token punctuation">:</span> userId<span class="token punctuation">,</span>
+        <span class="token string-literal"><span class="token string">'userType'</span></span><span class="token punctuation">:</span> userType<span class="token punctuation">,</span>
+        <span class="token string-literal"><span class="token string">'email'</span></span><span class="token punctuation">:</span> emailController<span class="token punctuation">.</span>text<span class="token punctuation">,</span>
+        <span class="token string-literal"><span class="token string">'access_token'</span></span><span class="token punctuation">:</span> accessToken<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">await</span> storage<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>
+        key<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'login'</span></span><span class="token punctuation">,</span>
+        value<span class="token punctuation">:</span> payload<span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      ref<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>mainTapProvider<span class="token punctuation">.</span>notifier<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+        <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+          builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">MainNavigationScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">errorAlert</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">onSocialLoginTap</span><span class="token punctuation">(</span>int method<span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token keyword">await</span> dotenv<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">final</span> <span class="token class-name">String</span> privateKey <span class="token operator">=</span> <span class="token punctuation">[</span>
+      dotenv<span class="token punctuation">.</span>env<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'APPLE_PRIVATE_KEY_LINE1'</span></span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">,</span>
+      dotenv<span class="token punctuation">.</span>env<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'APPLE_PRIVATE_KEY_LINE2'</span></span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">,</span>
+      dotenv<span class="token punctuation">.</span>env<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'APPLE_PRIVATE_KEY_LINE3'</span></span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">,</span>
+      dotenv<span class="token punctuation">.</span>env<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'APPLE_PRIVATE_KEY_LINE4'</span></span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">,</span>
+      dotenv<span class="token punctuation">.</span>env<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'APPLE_PRIVATE_KEY_LINE5'</span></span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">,</span>
+      dotenv<span class="token punctuation">.</span>env<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'APPLE_PRIVATE_KEY_LINE6'</span></span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'\\n'</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>method <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> <span class="token class-name">GoogleSignInService</span> signInService <span class="token operator">=</span> <span class="token class-name">GoogleSignInService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> account <span class="token operator">=</span> <span class="token keyword">await</span> signInService<span class="token punctuation">.</span><span class="token function">signInWithGoogle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>account <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>account<span class="token punctuation">.</span>additionalUserInfo <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">final</span> isNewUser <span class="token operator">=</span> account<span class="token punctuation">.</span>additionalUserInfo<span class="token operator">!</span><span class="token punctuation">.</span>isNewUser<span class="token punctuation">;</span>
+          <span class="token keyword">final</span> credential <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'</span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">account<span class="token punctuation">.</span>credential<span class="token operator">!</span><span class="token punctuation">.</span>token</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
+
+          <span class="token keyword">final</span> userData <span class="token operator">=</span> account<span class="token punctuation">.</span>additionalUserInfo<span class="token operator">!</span><span class="token punctuation">.</span>profile<span class="token punctuation">;</span>
+          <span class="token keyword">final</span> email <span class="token operator">=</span> userData<span class="token operator">!</span><span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'email'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token keyword">final</span> password <span class="token operator">=</span> <span class="token string-literal"><span class="token string">'</span><span class="token interpolation"><span class="token punctuation">${</span><span class="token expression">account<span class="token punctuation">.</span>credential<span class="token operator">!</span><span class="token punctuation">.</span>token</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">;</span>
+          <span class="token keyword">final</span> nickname <span class="token operator">=</span> userData<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'given_name'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token keyword">final</span> name <span class="token operator">=</span> userData<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'name'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token keyword">final</span> imageUrl <span class="token operator">=</span> userData<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'picture'</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token keyword">const</span> phone <span class="token operator">=</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">;</span>
+          <span class="token keyword">const</span> introduction <span class="token operator">=</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>isNewUser<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 신규 회원일 경우에만 회원가입 진행</span>
+            <span class="token class-name">UserModel</span> user <span class="token operator">=</span> <span class="token class-name">UserModel</span><span class="token punctuation">(</span>
+              type<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+              method<span class="token punctuation">:</span> method<span class="token punctuation">,</span>
+              email<span class="token punctuation">:</span> email<span class="token punctuation">,</span>
+              password<span class="token punctuation">:</span> password<span class="token punctuation">,</span>
+              nickname<span class="token punctuation">:</span> nickname<span class="token punctuation">,</span>
+              name<span class="token punctuation">:</span> name<span class="token punctuation">,</span>
+              phone<span class="token punctuation">:</span> phone<span class="token punctuation">,</span>
+              introduction<span class="token punctuation">:</span> introduction<span class="token punctuation">,</span>
+              imageUrl<span class="token punctuation">:</span> imageUrl<span class="token punctuation">,</span>
+              appleToken<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+              appleIdentifier<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">final</span> result <span class="token operator">=</span> <span class="token keyword">await</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span><span class="token function">postUserJoinProvider</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">.</span>future<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_code'</span></span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+                <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+                  builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">MainNavigationScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token function">errorAlert</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">dynamic</span><span class="token punctuation">></span></span> args <span class="token operator">=</span> <span class="token punctuation">[</span>
+              email<span class="token punctuation">,</span>
+              credential<span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">final</span> result <span class="token operator">=</span> <span class="token keyword">await</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span><span class="token function">postUserLoginProvider</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">.</span>future<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_code'</span></span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              ref<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>mainTapProvider<span class="token punctuation">.</span>notifier<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+              <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+                <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+                  builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">MainNavigationScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>method <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 휴대폰에 카카오톡이 깔려있는지 bool 값으로 반환해주는 함수</span>
+      bool installed <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">isKakaoTalkInstalled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 깔려있다면 UserApi.instance.loginWithKakaoTalk() 으로 카카오톡 오픈 후 동의</span>
+      <span class="token comment">// 깔려있지 않다면 UserApi.instance.loginWithKakaoAccount() 으로 웹을 통한 인증</span>
+      <span class="token class-name">OAuthToken</span> token <span class="token operator">=</span> installed
+          <span class="token operator">?</span> <span class="token keyword">await</span> <span class="token class-name">UserApi</span><span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">loginWithKakaoTalk</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token punctuation">:</span> <span class="token keyword">await</span> <span class="token class-name">UserApi</span><span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">loginWithKakaoAccount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 위 두가지 방법으로 인증 로그인 성공 후 유저 정보 가져오기</span>
+      <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token class-name">UserApi</span><span class="token punctuation">.</span>instance<span class="token punctuation">.</span><span class="token function">me</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">final</span> id <span class="token operator">=</span> user<span class="token punctuation">.</span>id<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> email <span class="token operator">=</span> user<span class="token punctuation">.</span>kakaoAccount<span class="token operator">!</span><span class="token punctuation">.</span>email<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> nickname <span class="token operator">=</span> user<span class="token punctuation">.</span>properties<span class="token operator">!</span><span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'nickname'</span></span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> imageUrl <span class="token operator">=</span> user<span class="token punctuation">.</span>properties<span class="token operator">!</span><span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'profile_image'</span></span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 서버로 유저 정보 전송하여 데이터베이스에 저장하기</span>
+      <span class="token class-name">UserModel</span> userData <span class="token operator">=</span> <span class="token class-name">UserModel</span><span class="token punctuation">(</span>
+        type<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        method<span class="token punctuation">:</span> method<span class="token punctuation">,</span>
+        email<span class="token punctuation">:</span> email<span class="token punctuation">,</span>
+        password<span class="token punctuation">:</span> id<span class="token punctuation">,</span>
+        nickname<span class="token punctuation">:</span> nickname<span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> nickname<span class="token punctuation">,</span>
+        phone<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+        introduction<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+        imageUrl<span class="token punctuation">:</span> imageUrl<span class="token punctuation">,</span>
+        appleToken<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+        appleIdentifier<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> result <span class="token operator">=</span> <span class="token keyword">await</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span><span class="token function">postUserJoinProvider</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token punctuation">.</span>future<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_code'</span></span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+            <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+              builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">MainNavigationScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">print</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">errorAlert</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">final</span> resultCode <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">' '</span></span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>resultCode <span class="token operator">==</span> <span class="token string-literal"><span class="token string">'207'</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 이미 가입된 이메일이면 로그인처리</span>
+          <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">dynamic</span><span class="token punctuation">></span></span> args <span class="token operator">=</span> <span class="token punctuation">[</span>
+            email<span class="token punctuation">,</span>
+            id<span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token keyword">final</span> loginResult <span class="token operator">=</span>
+              <span class="token keyword">await</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span><span class="token function">postUserLoginProvider</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">.</span>future<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>loginResult<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_code'</span></span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ref<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>mainTapProvider<span class="token punctuation">.</span>notifier<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+              <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+                builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">MainNavigationScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>loginResult<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">errorAlert</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> loginResult<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>method <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">final</span> credential <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token class-name">SignInWithApple</span><span class="token punctuation">.</span><span class="token function">getAppleIDCredential</span><span class="token punctuation">(</span>
+        scopes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token class-name">AppleIDAuthorizationScopes</span><span class="token punctuation">.</span>email<span class="token punctuation">,</span>
+          <span class="token class-name">AppleIDAuthorizationScopes</span><span class="token punctuation">.</span>fullName<span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">final</span> email <span class="token operator">=</span> credential<span class="token punctuation">.</span>email <span class="token operator">?</span><span class="token operator">?</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> password <span class="token operator">=</span> credential<span class="token punctuation">.</span>userIdentifier <span class="token operator">?</span><span class="token operator">?</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> nickname <span class="token operator">=</span> credential<span class="token punctuation">.</span>givenName <span class="token operator">?</span><span class="token operator">?</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> appleToken <span class="token operator">=</span> credential<span class="token punctuation">.</span>identityToken<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">final</span> appleIdentifier <span class="token operator">=</span> credential<span class="token punctuation">.</span>userIdentifier <span class="token operator">?</span><span class="token operator">?</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>email <span class="token operator">==</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 이미 가입된 이메일이면 로그인처리</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">dynamic</span><span class="token punctuation">></span></span> args <span class="token operator">=</span> <span class="token punctuation">[</span>
+          password<span class="token punctuation">,</span>
+          password<span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">final</span> loginResult <span class="token operator">=</span> <span class="token keyword">await</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span><span class="token function">postUserLoginProvider</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">.</span>future<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>loginResult<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_code'</span></span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          ref<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>mainTapProvider<span class="token punctuation">.</span>notifier<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+          <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+            <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+              builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">MainNavigationScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">print</span><span class="token punctuation">(</span>loginResult<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">errorAlert</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> loginResult<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 서버로 유저 정보 전송하여 데이터베이스에 저장하기</span>
+        <span class="token class-name">UserModel</span> userData <span class="token operator">=</span> <span class="token class-name">UserModel</span><span class="token punctuation">(</span>
+          type<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          method<span class="token punctuation">:</span> method<span class="token punctuation">,</span>
+          email<span class="token punctuation">:</span> email<span class="token punctuation">,</span>
+          password<span class="token punctuation">:</span> password<span class="token punctuation">,</span>
+          nickname<span class="token punctuation">:</span> nickname<span class="token punctuation">,</span>
+          name<span class="token punctuation">:</span> nickname<span class="token punctuation">,</span>
+          phone<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+          introduction<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+          imageUrl<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">''</span></span><span class="token punctuation">,</span>
+          appleToken<span class="token punctuation">:</span> appleToken<span class="token punctuation">,</span>
+          appleIdentifier<span class="token punctuation">:</span> appleIdentifier<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">final</span> result <span class="token operator">=</span> <span class="token keyword">await</span> ref<span class="token punctuation">.</span><span class="token function">watch</span><span class="token punctuation">(</span><span class="token function">postUserJoinProvider</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token punctuation">.</span>future<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_code'</span></span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+            <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+              builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">MainNavigationScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token function">print</span><span class="token punctuation">(</span>result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">errorAlert</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> result<span class="token punctuation">[</span><span class="token string-literal"><span class="token string">'result_msg'</span></span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">onChangePasswordTap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+      <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+        builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">SearchUserScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token metadata function">@override</span>
+  <span class="token class-name">Widget</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token class-name">BuildContext</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token class-name">Scaffold</span><span class="token punctuation">(</span>
+      body<span class="token punctuation">:</span> <span class="token class-name">SingleChildScrollView</span><span class="token punctuation">(</span>
+        child<span class="token punctuation">:</span> <span class="token class-name">Padding</span><span class="token punctuation">(</span>
+          padding<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">EdgeInsets</span><span class="token punctuation">.</span><span class="token function">symmetric</span><span class="token punctuation">(</span>
+            vertical<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+            horizontal<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          child<span class="token punctuation">:</span> <span class="token class-name">Column</span><span class="token punctuation">(</span>
+            crossAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">CrossAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+            children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">130</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>
+                width<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+                height<span class="token punctuation">:</span> <span class="token number">120</span><span class="token punctuation">,</span>
+                child<span class="token punctuation">:</span> <span class="token class-name">Center</span><span class="token punctuation">(</span>
+                  child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">asset</span><span class="token punctuation">(</span>
+                    <span class="token string-literal"><span class="token string">'assets/images/app_logo/detail_2x.png'</span></span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                  <span class="token class-name">Text</span><span class="token punctuation">(</span>
+                    <span class="token string-literal"><span class="token string">'이메일'</span></span><span class="token punctuation">,</span>
+                    style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+                      fontSize<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">TextField</span><span class="token punctuation">(</span>
+                controller<span class="token punctuation">:</span> emailController<span class="token punctuation">,</span>
+                decoration<span class="token punctuation">:</span> <span class="token class-name">InputDecoration</span><span class="token punctuation">(</span>
+                  hintText<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'Enter your email'</span></span><span class="token punctuation">,</span>
+                  <span class="token comment">// errorText 로직</span>
+                  errorText<span class="token punctuation">:</span> isEmailFieldTouched <span class="token operator">&amp;&amp;</span>
+                          emailController<span class="token punctuation">.</span>text<span class="token punctuation">.</span>isNotEmpty <span class="token operator">&amp;&amp;</span>
+                          <span class="token operator">!</span>isValidEmail
+                      <span class="token operator">?</span> <span class="token string-literal"><span class="token string">'이메일 형식을 입력해주세요'</span></span>
+                      <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+                  enabledBorder<span class="token punctuation">:</span> <span class="token class-name">OutlineInputBorder</span><span class="token punctuation">(</span>
+                    borderSide<span class="token punctuation">:</span> <span class="token class-name">BorderSide</span><span class="token punctuation">(</span>
+                      color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>grey<span class="token punctuation">.</span>shade400<span class="token punctuation">,</span>
+                      width<span class="token punctuation">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  focusedBorder<span class="token punctuation">:</span> <span class="token class-name">OutlineInputBorder</span><span class="token punctuation">(</span>
+                    borderSide<span class="token punctuation">:</span> <span class="token class-name">BorderSide</span><span class="token punctuation">(</span>
+                      color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>grey<span class="token punctuation">.</span>shade400<span class="token punctuation">,</span>
+                      width<span class="token punctuation">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  suffixIcon<span class="token punctuation">:</span> <span class="token class-name">GestureDetector</span><span class="token punctuation">(</span>
+                    onTap<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token function">onClearTap</span><span class="token punctuation">(</span>emailController<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    child<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span>
+                      <span class="token class-name">Icons</span><span class="token punctuation">.</span>cancel_outlined<span class="token punctuation">,</span>
+                      color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>black54<span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                  <span class="token class-name">Text</span><span class="token punctuation">(</span>
+                    <span class="token string-literal"><span class="token string">'비밀번호'</span></span><span class="token punctuation">,</span>
+                    style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+                      fontSize<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">TextField</span><span class="token punctuation">(</span>
+                controller<span class="token punctuation">:</span> passwordController<span class="token punctuation">,</span>
+                obscureText<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                decoration<span class="token punctuation">:</span> <span class="token class-name">InputDecoration</span><span class="token punctuation">(</span>
+                  hintText<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">'Enter your password'</span></span><span class="token punctuation">,</span>
+                  <span class="token comment">// errorText 로직</span>
+                  errorText<span class="token punctuation">:</span> isPasswordFieldTouched <span class="token operator">&amp;&amp;</span>
+                          passwordController<span class="token punctuation">.</span>text<span class="token punctuation">.</span>isNotEmpty <span class="token operator">&amp;&amp;</span>
+                          <span class="token operator">!</span>isValidPassword
+                      <span class="token operator">?</span> <span class="token string-literal"><span class="token string">'비밀번호는 8~15자 이내로 입력해주세요'</span></span>
+                      <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+                  enabledBorder<span class="token punctuation">:</span> <span class="token class-name">OutlineInputBorder</span><span class="token punctuation">(</span>
+                    borderSide<span class="token punctuation">:</span> <span class="token class-name">BorderSide</span><span class="token punctuation">(</span>
+                      color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>grey<span class="token punctuation">.</span>shade400<span class="token punctuation">,</span>
+                      width<span class="token punctuation">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  focusedBorder<span class="token punctuation">:</span> <span class="token class-name">OutlineInputBorder</span><span class="token punctuation">(</span>
+                    borderSide<span class="token punctuation">:</span> <span class="token class-name">BorderSide</span><span class="token punctuation">(</span>
+                      color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>grey<span class="token punctuation">.</span>shade400<span class="token punctuation">,</span>
+                      width<span class="token punctuation">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  suffixIcon<span class="token punctuation">:</span> <span class="token class-name">GestureDetector</span><span class="token punctuation">(</span>
+                    onTap<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token function">onClearTap</span><span class="token punctuation">(</span>passwordController<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    child<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Icon</span><span class="token punctuation">(</span>
+                      <span class="token class-name">Icons</span><span class="token punctuation">.</span>cancel_outlined<span class="token punctuation">,</span>
+                      color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>black54<span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">TextButton</span><span class="token punctuation">(</span>
+                onPressed<span class="token punctuation">:</span> onLoginTap<span class="token punctuation">,</span>
+                style<span class="token punctuation">:</span> <span class="token class-name">TextButton</span><span class="token punctuation">.</span><span class="token function">styleFrom</span><span class="token punctuation">(</span>
+                  backgroundColor<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">0xFFA48AFF</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  shape<span class="token punctuation">:</span> <span class="token class-name">RoundedRectangleBorder</span><span class="token punctuation">(</span>
+                    borderRadius<span class="token punctuation">:</span> <span class="token class-name">BorderRadius</span><span class="token punctuation">.</span><span class="token function">circular</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                child<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Padding</span><span class="token punctuation">(</span>
+                  padding<span class="token punctuation">:</span> <span class="token class-name">EdgeInsets</span><span class="token punctuation">.</span><span class="token function">symmetric</span><span class="token punctuation">(</span>
+                    vertical<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  child<span class="token punctuation">:</span> <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                    mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+                    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                      <span class="token class-name">Text</span><span class="token punctuation">(</span>
+                        <span class="token string-literal"><span class="token string">'로그인'</span></span><span class="token punctuation">,</span>
+                        style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+                          color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>white<span class="token punctuation">,</span>
+                          fontSize<span class="token punctuation">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+                          fontWeight<span class="token punctuation">:</span> <span class="token class-name">FontWeight</span><span class="token punctuation">.</span>bold<span class="token punctuation">,</span>
+                        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                  <span class="token class-name">GestureDetector</span><span class="token punctuation">(</span>
+                    onTap<span class="token punctuation">:</span> onChangePasswordTap<span class="token punctuation">,</span>
+                    child<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>
+                      <span class="token string-literal"><span class="token string">'비밀번호를 잊으셨나요?'</span></span><span class="token punctuation">,</span>
+                      style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+                        color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>redAccent<span class="token punctuation">,</span>
+                        fontSize<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                  <span class="token keyword">const</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>
+                    <span class="token string-literal"><span class="token string">"Don't have an account?"</span></span><span class="token punctuation">,</span>
+                    style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+                      fontSize<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>width<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token class-name">GestureDetector</span><span class="token punctuation">(</span>
+                    onTap<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token class-name">Navigator</span><span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+                        <span class="token class-name">MaterialPageRoute</span><span class="token punctuation">(</span>
+                          builder<span class="token punctuation">:</span> <span class="token punctuation">(</span>context<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">const</span> <span class="token class-name">SignUpScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    child<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>
+                      <span class="token string-literal"><span class="token string">'회원가입'</span></span><span class="token punctuation">,</span>
+                      style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+                        color<span class="token punctuation">:</span> <span class="token class-name">Color</span><span class="token punctuation">(</span><span class="token number">0xFFA48AFF</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        fontWeight<span class="token punctuation">:</span> <span class="token class-name">FontWeight</span><span class="token punctuation">.</span>bold<span class="token punctuation">,</span>
+                        fontSize<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>center<span class="token punctuation">,</span>
+                children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                  <span class="token class-name">Text</span><span class="token punctuation">(</span>
+                    <span class="token string-literal"><span class="token string">'소셜 로그인'</span></span><span class="token punctuation">,</span>
+                    style<span class="token punctuation">:</span> <span class="token class-name">TextStyle</span><span class="token punctuation">(</span>
+                      color<span class="token punctuation">:</span> <span class="token class-name">Colors</span><span class="token punctuation">.</span>grey<span class="token punctuation">.</span>shade500<span class="token punctuation">,</span>
+                      fontWeight<span class="token punctuation">:</span> <span class="token class-name">FontWeight</span><span class="token punctuation">.</span>bold<span class="token punctuation">,</span>
+                      fontSize<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token keyword">const</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>height<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token class-name">Padding</span><span class="token punctuation">(</span>
+                padding<span class="token punctuation">:</span> <span class="token keyword">const</span> <span class="token class-name">EdgeInsets</span><span class="token punctuation">.</span><span class="token function">symmetric</span><span class="token punctuation">(</span>
+                  horizontal<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                child<span class="token punctuation">:</span> <span class="token class-name">Row</span><span class="token punctuation">(</span>
+                  mainAxisAlignment<span class="token punctuation">:</span> <span class="token class-name">MainAxisAlignment</span><span class="token punctuation">.</span>spaceBetween<span class="token punctuation">,</span>
+                  children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token class-name">GestureDetector</span><span class="token punctuation">(</span>
+                      onTap<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token function">onSocialLoginTap</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                      child<span class="token punctuation">:</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>
+                        width<span class="token punctuation">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+                        height<span class="token punctuation">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+                        child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">asset</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'assets/images/kakao_logo.png'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token class-name">GestureDetector</span><span class="token punctuation">(</span>
+                      onTap<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token function">onSocialLoginTap</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                      child<span class="token punctuation">:</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>
+                        width<span class="token punctuation">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+                        height<span class="token punctuation">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+                        child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">asset</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'assets/images/google_logo.png'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token class-name">GestureDetector</span><span class="token punctuation">(</span>
+                      onTap<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token function">onSocialLoginTap</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                      child<span class="token punctuation">:</span> <span class="token class-name">SizedBox</span><span class="token punctuation">(</span>
+                        width<span class="token punctuation">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+                        height<span class="token punctuation">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+                        child<span class="token punctuation">:</span> <span class="token class-name">Image</span><span class="token punctuation">.</span><span class="token function">asset</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">'assets/images/apple_logo.png'</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div></div><div class="Post-module--footer--f8705"><div class="Meta-module--meta--dae0a"><p class="Meta-module--date--4d30d">Published<!-- --> <!-- -->2025. 10. 13.</p></div><div class="Tags-module--tags--18589"><ul class="Tags-module--list--82ae6"><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/flutter/">flutter</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/dart/">dart</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/validation/">validation</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/email/">email</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/password/">password</a></li><li class="Tags-module--item--52015"><a class="Button-module--button--b1113" href="/tag/riverpod/">riverpod</a></li></ul></div><div class="Author-module--author--1c58d"><p class="Author-module--bio--08950"><a class="Author-module--twitter--90647" href="https://github.com/pyheejin" rel="noopener noreferrer" target="_blank"><strong>JJiNi</strong> on Github</a></p></div></div><div class="Post-module--comments--d3b99"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/validation";window.___webpackCompilationHash="8c5089bb58d43316b801";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-b59eec70629f2a3351e1.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-02abafd21f3ca3501462.js"],"component---src-templates-categories-template-categories-template-tsx":["/component---src-templates-categories-template-categories-template-tsx-51610ac8ab433788c5d2.js"],"component---src-templates-category-template-category-template-tsx":["/component---src-templates-category-template-category-template-tsx-44d121c1203d8f57b565.js"],"component---src-templates-index-template-index-template-tsx":["/component---src-templates-index-template-index-template-tsx-0d4daddd4c63bf8ef354.js"],"component---src-templates-not-found-template-not-found-template-tsx":["/component---src-templates-not-found-template-not-found-template-tsx-aa567702e8f25a3411be.js"],"component---src-templates-page-template-page-template-tsx":["/component---src-templates-page-template-page-template-tsx-46908a8e6f0ea87f1ebd.js"],"component---src-templates-post-template-post-template-tsx":["/component---src-templates-post-template-post-template-tsx-9344050726d614f4665f.js"],"component---src-templates-tag-template-tag-template-tsx":["/component---src-templates-tag-template-tag-template-tsx-191967576cf6f4a652e3.js"],"component---src-templates-tags-template-tags-template-tsx":["/component---src-templates-tags-template-tags-template-tsx-da17464bf6cbe7c02c6d.js"]};/*]]>*/</script><script src="/app-b59eec70629f2a3351e1.js" async=""></script><script src="/framework-31695281f280946cdfdf.js" async=""></script><script src="/webpack-runtime-6fb0ad2a7c7ebf5719d0.js" async=""></script></body></html>
