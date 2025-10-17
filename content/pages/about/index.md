@@ -25,7 +25,7 @@ Python, FastAPI, Flask, Django, MySQL, SQLAlchemy, Flutter
 
 <hr>
 
-## 프로젝트
+## 개인 프로젝트
 ### 댄스메이트 (2024.12 ~ 진행중)
 
 > 자유롭게 춤을 배우고, 가르치고 싶어하는 사람들을 위한 플랫폼
@@ -43,6 +43,10 @@ Python, FastAPI, Flask, Django, MySQL, SQLAlchemy, Flutter
   - Tools : Git, GitHub
   - Front-end : Flutter
   - Back-end : Python, FastAPI
+
+- 본인 역할
+  - 백엔드 API 개발 및 Flutter 클라이언트 개발
+  - Riverpod 상태 관리 및 UI/UX 구현 경험
 
 ### 일리 (2024.10.24 ~ 2024.11.25)
 eilly, 영양제 추천 사이트 '필리' 클론코딩
@@ -62,27 +66,70 @@ eilly, 영양제 추천 사이트 '필리' 클론코딩
   - Tools : Git, GitHub
   - Front-end : Flutter
 
+- 본인 역할
+  - 백엔드 API 개발 및 Flutter 클라이언트 개발
+  - Riverpod 상태 관리 및 UI/UX 구현 경험
+
+<hr>
+
+## 팀 프로젝트
+### 투두메이트 (2024.08.12 ~ 2024.08.26)
+
+> 친구와 함께 투두리스트를 작성하고 완료 여부를 공유하며 동기부여 제공
+
+<img src="./todomate.png" width="400" height="200"/>
+<img src="./todomate_erd.png" width="400" height="200"/>
+
+- 주요기능
+  - 유저: 로그인, 회원가입
+  - 채팅: 웹소켓 실시간 소통, 채팅방 알림, 채팅방 예약 생성 및 자동종료, 주제별 필터
+  - 다이어리: 캘린더에 날짜별 일기 작성/수정/삭제, 사진 추가
+  - 마이페이지: 프로필 이미지/닉네임/비밀번호 변경, 회원 탈퇴
+  - 투두리스트: 투두리스트 생성/수정/삭제, 투두 완료시 알림 전송
+
+- 개발환경
+  - Tools : Git, GitHub
+  - Front-end : Flutter
+
+- 본인 역할
+  - Riverpod 상태 관리 및 UI/UX 구현 경험
+  - 채팅 리스트 화면
+  - 채팅방 상세 화면
+  - 채팅방 예약 및 참여 기능
+  - 채팅방 알림 기능
+  - 채팅방 목록 필터
+  - ERD 설계
+
 <hr>
 
 ## 경력
 
-**주식회사 원루프랩** <br>
-*2024.12 - 재직중* <br>
-공유 오피스 관리
+**엘리스 플러터 앱 개발자 과정** <br>
+*2024.07 - 2024.12 (1년 2개월)* <br>
+미용실 매출 및 예약, 매장 관리 서비스 <br>
+- 플러터 개발 훈련 수료(Flutter)
+
+<br>
 
 **주식회사 한국미용데이터** <br>
 *2023.03 - 2024.04 (1년 2개월)* <br>
 미용실 매출 및 예약, 매장 관리 서비스 <br>
-뷰카 앱 서버 구축 및 API 개발
+- 뷰카 앱 서버 구축 및 API 개발(Python, FastAPI)
+
+<br>
 
 **데블록(Devlock)** <br>
 *2020.11 - 2022.07 (1년 9개월)* <br>
-서비스/어드민 api 개발 및 유지보수
+- 서비스/어드민 api 개발 및 유지보수(Python, Flask)
+
+<br>
 
 **디에이웍스** <br>
 *2020.07 - 2022.11 (5개월)* <br>
-어드민 api 개발 및 유지보수
+- 어드민 api 개발 및 유지보수(Python, Django)
+
+<br>
 
 **백엔드 훈련과정(위코드 Wecode)** <br>
 *2020.03 - 2022.06 (4개월)* <br>
-백엔드 개발 훈련 수료
+- 백엔드 개발 훈련 수료(Python, Flask)
